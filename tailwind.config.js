@@ -12,6 +12,9 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["Outfit", ...defaultTheme.fontFamily.sans]
+      },
+      backgroundImage: {
+        'rentalshop': "url('https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/05/BG-Blur2.png')",
       }
     }
   },

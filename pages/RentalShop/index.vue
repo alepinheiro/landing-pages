@@ -1,7 +1,6 @@
 <style>
     .body-rentalshop{
-        @apply bg-cover min-h-screen ;
-        background-image: url('https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/05/BG-Blur2.png')
+        @apply bg-cover min-h-screen bg-rentalshop;
 
     }
 
