@@ -1,10 +1,7 @@
 <style>
-    body{
-        @apply bg-cover;
-        background-image: url('https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/04/TRILHA_Heccus_LandingPagebackground.webp')
-    }
     .mainContent{
-        @apply min-h-screen container mx-auto md:px-4;
+        @apply min-h-screen container mx-auto md:px-4 bg-cover;
+        background-image: url('https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/04/TRILHA_Heccus_LandingPagebackground.webp')
     }
     .logo{
         @apply px-10 py-5 ;
