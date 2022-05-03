@@ -1,7 +1,6 @@
 <style>
     .body-rentalshop{
         @apply bg-cover min-h-screen bg-rentalshop;
-
     }
 
 </style>
