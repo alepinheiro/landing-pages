@@ -12,15 +12,15 @@
 }
 
 .heat-rentalshop {
-    @apply uppercase text-center my-4;
+    @apply uppercase text-center my-4 md:text-left;
 }
 
 .headline-h1 h1 {
-    @apply text-xl font-bold text-center my-4;
+    @apply text-xl font-bold text-center md:text-left my-4;
 }
 
 .offer-text {
-    @apply text-center;
+    @apply text-center md:text-left;
 }
 
 .registrationForm {

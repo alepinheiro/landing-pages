@@ -8,40 +8,23 @@
     .rentalshop-form{
         @apply p-4 text-zinc-900;
     }
-    .rentalshop-input-group{
-        @apply  flex flex-col mb-4;
+    .input-wrapper {
+        @apply relative z-0 w-full mb-6 ;
     }
-    .rentalshop-input-group label{
-        @apply mb-1;
+    .input-form {
+        @apply block py-2.5 px-2 w-full text-sm text-zinc-900 bg-transparent border-0 border-b-2 border-zinc-800 appearance-none focus:outline-none focus:ring-0 focus:border-orange-600;
     }
-    .rentalshop-input-group input {
-        @apply
-            w-full border-b-2 border-zinc-800 p-2
-            bg-transparent rounded-none
-            focus:outline-none focus:ring-0
-            placeholder:text-black/20;
+    .label-form {
+        @apply px-2 peer-focus:font-medium absolute text-sm text-zinc-900  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-orange-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6;
     }
-    .rentalshop-input-group select {
-        @apply
-            w-full border-b-2 border-zinc-800 p-2
-            bg-transparent rounded-none
-            focus:outline-none focus:ring-0
-            placeholder:text-black/20;
+    .checkbox-wrapper {
+        @apply flex items-center mb-4;
     }
-    .checkbox-wrapper{
-        @apply my-4 w-full;
-    }
-    .checkbox{
-        @apply flex items-center mb-2;
-    }
-    .checkbox input{
-        @apply w-4 h-4 text-zinc-600 bg-gray-100 rounded border-gray-300 focus:ring-zinc-300 focus:ring-2 ;
-    }
-    .checkbox label{
-        @apply ml-3 text-sm font-medium;
+    .checkbox-input {
+        @apply w-4 h-4 text-orange-600 bg-orange-100 border-gray-300 rounded focus:ring-orange-500 focus:ring-2 ;
     }
     .rentalshop-form button{
-        @apply w-full m-auto bg-blue-600 text-white rounded py-2 px-4 uppercase flex flex-row items-center justify-center;
+        @apply w-full m-auto bg-orange-600 text-white rounded py-2 px-4 uppercase flex flex-row items-center justify-center;
     }
     .btn-loading{
         @apply w-14 h-14 px-2;
@@ -54,68 +37,62 @@
 <template>
     <form id="form" class="rentalshop-form" @submit="submitForm" :name="form_name">
 
-        <div class="rentalshop-input-group">
-            <label for="name">Nome completo</label>
-            <input
-                type="text"
-                name="name"
-                id="name"
-                placeholder="Nome"
-                v-model="nameInput"
-                required
-            >
+        <div class="input-wrapper group">
+          <input
+            type="text"
+            name="name"
+            class="input-form peer"
+            placeholder=" "
+            required=""
+          >
+          <label for="name" class="label-form">Nome Completo</label>
         </div>
 
-        <div class="rentalshop-input-group">
-            <label for="whatsapp">WhatsApp</label>
-            <the-mask :mask="['(##) ####-####', '(##) #####-####']"
+        <div class="input-wrapper group">
+            <the-mask
+                :mask="['(##) ####-####', '(##) #####-####']"
+                class="input-form peer"
                 name="whatsapp"
                 id="whatsapp"
-                placeholder="WhatsApp com DDD"
+                placeholder=" "
                 v-model="whatsappInput"
                 required
             />
+          <label for="whatsapp" class="label-form">WhatsApp</label>
         </div>
 
-        <div class="rentalshop-input-group">
-            <label for="email">Email</label>
+        <div class="input-wrapper group">
             <input
+                class="input-form peer"
                 type="email"
                 name="email"
                 id="email"
-                placeholder="Email"
+                placeholder=" "
                 v-model="emailInput"
                 required
             >
+            <label for="email" class="label-form">E-mail</label>
         </div>
 
-        <div class="rentalshop-input-group">
-
-            <label for="job">Cargo</label>
-            <select
-                name="job"
-                id="job"
-                v-model="jobInput"
-                required
-            >
-                <option v-for="job in jobs" :value="job.value">
-                    {{job.text}}
-                </option>
-            </select>
-
+        <div class="input-wrapper ">
+          <label for="jobs" class="block mb-2 text-sm font-medium text-gray-900 ">Você é:</label>
+          <select id="jobs" class="bg-transparent border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5 focus:outline-none ">
+            <option v-for="job in jobs" :value="job.value">
+                {{job.text}}
+            </option>
+          </select>
         </div>
 
-        <div class="checkbox-wrapper ">
-            <div class="checkbox">
-                <input id="checkbox-1" aria-describedby="checkbox-1" type="checkbox" checked required>
-                <label for="checkbox-1" >Estou de acordo com os <a href="#" class=" hover:underline">termos e condições.</a></label>
-            </div>
-
-            <div class="checkbox">
-                <input id="checkbox-2" aria-describedby="checkbox-2" type="checkbox" checked required>
-                <label for="checkbox-2">Autorizo o envio de comunicações.</label>
-            </div>
+        <div class="checkbox-wrapper">
+            <input checked id="terms-conditions" type="checkbox" value="" class="checkbox-input checked:bg-orange-500" >
+            <label for="terms-conditions" class="ml-2 text-sm font-medium text-gray-900 ">Estou de acordo com os <a href="#" class="text-orange-600 hover:underline ">termos e condições</a>.</label>
         </div>
+
+        <div class="checkbox-wrapper">
+            <input checked id="promotional-communication" type="checkbox" value="" class="checkbox-input">
+            <label for="promotional-communication" class="ml-2 text-sm font-medium text-gray-900 ">Aceito receber ofertas e promoções</label>
+        </div>
+
 
         <button type="submit">
             <div class="btnText">

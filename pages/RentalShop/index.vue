@@ -1,13 +1,13 @@
-<style scoped>
-    .body-rentalshop{
-        @apply bg-cover min-h-screen bg-rentalshop;
+<style>
+    body{
+         @apply bg-cover bg-rentalshop;
     }
 
 </style>
 
 <template>
 
-    <div class="body-rentalshop">
+    <div>
 
         <RentalShopTopBanner />
 
@@ -16,6 +16,7 @@
         <RentalShopIconGroup />
 
         <RentalShopFooterLinks />
+
     </div>
 
 </template>
