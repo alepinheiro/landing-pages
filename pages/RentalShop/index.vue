@@ -1,4 +1,4 @@
-<style>
+<style scoped>
     .body-rentalshop{
         @apply bg-cover min-h-screen bg-rentalshop;
     }
@@ -10,7 +10,6 @@
     <div class="body-rentalshop">
 
         <RentalShopTopBanner />
-
 
         <RentalShopMainContent />
 
