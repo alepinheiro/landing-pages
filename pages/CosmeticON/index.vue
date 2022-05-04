@@ -1,6 +1,6 @@
 <style>
     .cosmeticon-btn{
-        @apply bg-green-700 px-4 py-2 rounded text-white uppercase;
+        @apply bg-green-700 hover:bg-green-800 px-4 py-2 rounded text-white uppercase;
     }
 </style>
 
