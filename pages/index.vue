@@ -39,6 +39,12 @@
                 </li>
             </NuxtLink>
 
+            <NuxtLink to="/CosmeticON/">
+                <li>
+                    CosmeticON
+                </li>
+            </NuxtLink>
+
         </ul>
     </div>
 
