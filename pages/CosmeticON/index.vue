@@ -8,12 +8,12 @@
     <div class="bg-white min-h-screen">
 
         <div class=" border-b-green-600 border-b-4">
-            <img class="h-48 object-cover md:object-contain md:h-auto" src="@/static/cosmeticON/página-pós-evento_01.png" alt="" srcset="">
+            <img class="h-48 object-cover md:object-contain md:h-auto" src="https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/05/pagina-pos-evento_01.webp" alt="" srcset="">
         </div>
 
         <div class=" px-8 my-8 max-w-md mx-auto">
             <h1 class="text-center uppercase text-2xl">Pós Evento</h1>
-            <img src="@/static/cosmeticON/página-pós-evento_05.png" alt="" srcset="">
+            <img src="https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/05/pagina-pos-evento_05.webp" alt="" srcset="">
         </div>
 
         <div class="flex flex-col md:flex-row gap-4 w-fit mx-auto my-20">
@@ -23,8 +23,8 @@
         </div>
 
         <div class="flex flex-row px-8 mx-auto w-full justify-center">
-            <img class="h-24" src="@/static/cosmeticON/página-pós-evento_09.png" alt="" srcset="">
-            <img class="h-24" src="@/static/cosmeticON/página-pós-evento_12.png" alt="" srcset="">
+            <img class="h-24" src="https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/05/pagina-pos-evento_09.webp" alt="" srcset="">
+            <img class="h-24" src="https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/05/pagina-pos-evento_12.webp" alt="" srcset="">
         </div>
 
         <div class="flex flex-col mx-auto">
@@ -38,7 +38,7 @@
         </div>
 
         <div class="mt-20">
-            <img src="@/static/cosmeticON/página-pós-evento_01.png" alt="" srcset="">
+            <img src="https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/05/pagina-pos-evento_01.webp" alt="" srcset="">
         </div>
     </div>
 </template>
@@ -56,23 +56,23 @@ export default {
         {
             name: 'Estética In Sul',
             date: '25 a 27 de junho',
-            image: 'http://unsplash.it/600/600?random=1&gravity=center'
+            image: 'https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/05/pagina-pos-evento_19.webp'
         },{
             name: 'Ibramed',
             date: '25 a 27 de junho',
-            image: 'http://unsplash.it/600/600?random=2&gravity=center'
+            image: 'https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/05/pagina-pos-evento_20.webp'
         },{
             name: 'Roxo',
             date: '25 a 27 de junho',
-            image: 'http://unsplash.it/600/600?random=3&gravity=center'
+            image: 'https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/05/pagina-pos-evento_21.webp'
         },{
             name: 'HTM',
             date: '25 a 27 de junho',
-            image: 'http://unsplash.it/600/600?random=4&gravity=center'
+            image: 'https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/05/pagina-pos-evento_23.webp'
         },{
             name: 'Revela Estética',
             date: '25 a 27 de junho',
-            image: 'http://unsplash.it/600/600?random=5&gravity=center'
+            image: 'https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/05/pagina-pos-evento_25.webp'
         },
 
       ],
