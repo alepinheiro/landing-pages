@@ -29,10 +29,11 @@
 
         <div class="flex flex-col mx-auto">
             <h1 class="text-center uppercase my-4"><strong>Próximos</strong> eventos</h1>
-            <div class="flex flex-row mx-auto justify-center gap-4">
-                <div v-for="event in events" class="break-words">
+            <div class="flex flex-row flex-wrap mx-auto justify-center gap-4 px-8 ">
+                <div v-for="event in events" class="flex flex-col items-center justify-between">
                     <img class="h-20 w-20 mx-auto rounded-full" :src="event.image" alt="" srcset="">
-                    <p class="text-center w-20">{{event.name}}</p>
+                    <p class="text-center w-20 break-words font-bold">{{event.name}}</p>
+                    <p class="text-center text-sm">{{event.date}}</p>
                 </div>
             </div>
         </div>
@@ -58,20 +59,20 @@ export default {
             date: '25 a 27 de junho',
             image: 'https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/05/pagina-pos-evento_19.webp'
         },{
-            name: 'Ibramed',
-            date: '25 a 27 de junho',
+            name: 'Ibramed Experience',
+            date: '09  de julho',
             image: 'https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/05/pagina-pos-evento_20.webp'
         },{
-            name: 'Roxo',
-            date: '25 a 27 de junho',
+            name: 'Congresso Nany Mota',
+            date: '27 de agosto',
             image: 'https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/05/pagina-pos-evento_21.webp'
         },{
-            name: 'HTM',
-            date: '25 a 27 de junho',
+            name: 'HTM Scientific',
+            date: '17 e 18 de setembro',
             image: 'https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/05/pagina-pos-evento_23.webp'
         },{
             name: 'Revela Estética',
-            date: '25 a 27 de junho',
+            date: '30 de outubro',
             image: 'https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/05/pagina-pos-evento_25.webp'
         },
 
