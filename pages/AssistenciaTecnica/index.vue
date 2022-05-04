@@ -1,34 +1,38 @@
 <style>
-.slide {
-  @apply border border-zinc-300 mx-auto text-center shadow rounded;
-}
+  body{
+    @apply bg-white;
+  }
+  .slide {
+    @apply border border-zinc-300 mx-auto text-center shadow rounded;
+  }
 
-.btn {
-  @apply bg-zinc-500 text-white px-4 py-2 rounded text-sm my-4;
-}
+  .btn {
+    @apply bg-zinc-500 text-white px-4 py-2 rounded text-sm my-4;
+  }
 
-.badge {
-  @apply inline-flex items-center justify-center px-2 py-1 text-xs whitespace-nowrap font-bold bg-green-200 rounded;
-}
-.input-wrapper {
-  @apply relative z-0 w-full mb-6 ;
-}
-.form-input{
-  @apply block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 ;
-}
+  .badge {
+    @apply inline-flex items-center justify-center px-2 py-1 text-xs whitespace-nowrap font-bold bg-green-200 rounded;
+  }
+  .input-wrapper {
+    @apply relative z-0 w-full mb-6 ;
+  }
+  .form-input{
+    @apply block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 ;
+  }
 
-.form-label{
-  @apply peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6;
-}
+  .form-label{
+    @apply peer-focus:font-medium absolute text-sm text-gray-500  duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6;
+  }
 </style>
 
 <template>
   <div>
-    <div>
-      <img src="http://unsplash.it/g/1080/1080?random&blur&gravity=center" alt="" />
+
+    <div class="mx-auto ">
+      <img class="md:h-64 object-cover w-full" src="http://unsplash.it/g/1080/1080?random&gravity=center" alt="" />
     </div>
 
-    <div class="text-center my-4 px-8">
+    <div class="text-center my-4 max-w-md mx-auto">
       <h1 class="text-2xl font-bold">Assistência técnica em Florianópolis</h1>
       <p class="my-2">
         Assistência técnica de aparelhos para estética e fisioterapia, das
@@ -37,12 +41,12 @@
       </p>
     </div>
 
-    <div class="text-center my-4 px-8">
+    <div class="text-center my-4 max-w-md mx-auto">
       <h1 class="text-2xl font-bold">Como funciona?</h1>
     </div>
 
-    <div class="mx-auto my-4">
-      <ssr-carousel :slides-per-page="1" peek="10%" feather>
+    <div class="mx-auto my-4 max-w-md">
+      <ssr-carousel :slides-per-page="1" peek="10%" feather show-arrows>
         <div class="slide">
           <div class="flex flex-row border-b">
             <div class="bg-zinc-300 py-4 px-6">1</div>
@@ -106,7 +110,7 @@
       <h1 class="text-2xl font-bold">Principais Serviços</h1>
     </div>
 
-    <div class="mx-8 my-4 border border-gray-200 divide-y divide-gray-200 rounded">
+    <div class="mx-auto my-4 border border-gray-200 divide-y divide-gray-200 rounded max-w-md">
       <details>
         <summary class="py-3 px-4 cursor-pointer select-none w-full outline-none">Calibração de Equipamentos</summary>
         <div class="pt-1 pb-3 px-4">
@@ -150,7 +154,7 @@
 
     </div>
 
-    <div class="border rounded flex flex-col mx-8 my-4">
+    <div class="border rounded flex flex-col mx-auto max-w-md my-4">
       <div class="flex flex-row w-full bg-zinc-200 items-center justify-center py-2 mx-auto">
 
         <div class="">
@@ -165,14 +169,14 @@
         </div>
       </div>
 
-      <div class="flex flex-wrap w-full justify-center items-center gap-4 p-4">
+      <div class="flex flex-wrap w-full justify-center items-center gap-4 p-4 ">
         <div class="badge" v-for="brand in brands">
           <span>{{ brand.name }}</span>
         </div>
       </div>
     </div>
 
-    <div class="mx-8 my-8 border rounded">
+    <div class="mx-auto max-w-md my-8 border rounded">
       <div class="text-center my-8">
         <h1 class="text-2xl font-bold">Entre em contato pelo WhatsApp</h1>
       </div>

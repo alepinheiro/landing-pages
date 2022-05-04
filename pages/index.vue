@@ -11,41 +11,42 @@
 
 <template>
 
-    <div class="p-5 mx-auto bg-zinc-800 min-h-screen">
+    <div class="p-5 bg-zinc-800 min-h-screen ">
+        <div class="max-w-md mx-auto ">
+            <div class="bg-blue-800 px-4 rounded shadow ">
+                <h1 class=" text-center text-white text-3xl font-bold py-2">
+                    Páginas:
+                </h1>
+            </div>
 
-        <div class="bg-blue-800 px-4 rounded shadow">
-            <h1 class=" text-center text-white text-3xl font-bold py-2">
-                Páginas:
-            </h1>
+            <ul>
+
+                <NuxtLink to="/HeccusTurbo/">
+                    <li>
+                        Heccus Turbo
+                    </li>
+                </NuxtLink>
+
+                <NuxtLink to="/RentalShop/">
+                    <li>
+                        RentalShop
+                    </li>
+                </NuxtLink>
+
+                <NuxtLink to="/AssistenciaTecnica/">
+                    <li>
+                        Assistência Técnica
+                    </li>
+                </NuxtLink>
+
+                <NuxtLink to="/CosmeticON/">
+                    <li>
+                        CosmeticON
+                    </li>
+                </NuxtLink>
+
+            </ul>
         </div>
-
-        <ul>
-
-            <NuxtLink to="/HeccusTurbo/">
-                <li>
-                    Heccus Turbo
-                </li>
-            </NuxtLink>
-
-            <NuxtLink to="/RentalShop/">
-                <li>
-                    RentalShop
-                </li>
-            </NuxtLink>
-
-            <NuxtLink to="/AssistenciaTecnica/">
-                <li>
-                    Assistência Técnica
-                </li>
-            </NuxtLink>
-
-            <NuxtLink to="/CosmeticON/">
-                <li>
-                    CosmeticON
-                </li>
-            </NuxtLink>
-
-        </ul>
     </div>
 
 </template>
