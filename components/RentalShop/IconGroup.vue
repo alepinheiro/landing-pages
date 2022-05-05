@@ -28,7 +28,7 @@
                 </svg>
             </div>
             <div class="text-offer">
-                A live será transmitida pela Instagram da RentalMed.
+                Dia 12/05 no Instagram da RentalMed
             </div>
         </div>
         <div class="icon-elements">
@@ -40,7 +40,7 @@
                 </svg>
             </div>
             <div class="text-offer">
-                Os melhores descontos para esteticistas você só encontra aqui.
+                Aparelhos das principais marcas da estética e fisioterapia
             </div>
         </div>
         <div class="icon-elements">
@@ -56,7 +56,7 @@
                 </svg>
             </div>
             <div class="text-offer">
-                Venha fazer networking com outras esteticistas do Brasil.
+                Com os MAIORES descontos
             </div>
         </div>
         <div class="icon-elements">
@@ -68,7 +68,7 @@
                 </svg>
             </div>
             <div class="text-offer">
-                Tire todas as súas dúvidas antes de comprar seu aparelho novo.
+                Tire todas as súas dúvidas sobre os aparelhos
             </div>
         </div>
     </div>

@@ -57,16 +57,17 @@
                 </div>
 
                 <div class="heat-rentalshop">
-                    a sua live de ofertas da estética<br />
+                    o seu programa de ofertas da estética<br />
                     quinta - 12 de maio - 20h30
                 </div>
 
                 <div class="offer-text">
                     <p>
-                        Uma live de descontos um programa para tirar dúvidas sobre os
-                        principais aparelhos do mercado da estética Seu informativo sobre as
-                        novidades e o principal: onde as principais
-                        <strong>OFERTAS RELÂMPAGO </strong> estarão.
+                        Um programa perfeito para profissionais da estética onde você encontrará novidades, informações e o principal:
+                        <strong>OFERTAS RELÂMPAGO COMO VOCÊ NUNCA VIU.</strong>
+
+                        <br>Quer receber as ofertas antes de todo mundo e ser avisado quando a live vai começar?
+                        <br> Cadastre-se e seja o primeiro a saber.
                     </p>
                 </div>
             </div>

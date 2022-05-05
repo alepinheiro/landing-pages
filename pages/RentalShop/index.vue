@@ -1,13 +1,13 @@
 <style>
     body{
-         @apply bg-cover bg-rentalshop;
+         @apply bg-white ;
     }
 
 </style>
 
 <template>
 
-    <div>
+    <div class="bg-cover bg-rentalshop">
 
         <RentalShopTopBanner />
 
@@ -29,7 +29,7 @@
 
         data(){
             return {
-                title: '[LIVE] A sua Live de Ofertas - RentalShop',
+                title: '[LIVE] O seu programa de Ofertas - RentalShop',
                 description: 'As melhores ofertas de estética',
                 keywords: 'RentalShop RentalMed Live',
                 url: 'https://rentalmed.com.br/rentalshop',
