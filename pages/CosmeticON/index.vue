@@ -1,6 +1,6 @@
 <style>
     .cosmeticon-btn{
-        @apply bg-green-700 hover:bg-green-800 px-4 py-2 rounded text-white uppercase text-center;
+        @apply bg-green-700 hover:bg-green-800 px-4 py-2 rounded text-white uppercase text-center h-fit;
     }
 </style>
 
@@ -16,7 +16,7 @@
             <img src="https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/05/pagina-pos-evento_05.webp" alt="" srcset="">
         </div>
 
-        <div class="flex flex-col md:flex-row gap-4 w-fit mx-auto h-64 justify-center" v-if="showButtons">
+        <div class="flex flex-col md:flex-row gap-4 w-fit mx-auto h-64 justify-center items-center" v-if="showButtons">
 
             <a href="#" class="cosmeticon-btn"> Fotos Evento </a>
             <button class="cosmeticon-btn" @click="hideButtons"> Gere seu certificado</button>
@@ -92,7 +92,7 @@ export default {
       showButtons: true,
       getCertificate: false,
       inputError: false,
-      name: 'Alessandro Pinheiro da Silva 08125887995',
+      name: '',
     }
   },
   head() {
@@ -152,9 +152,11 @@ export default {
     showCertificate() {
       if(this.name.length > 0){
         this.getCertificate = true
+      } else {
+        this.inputError = true
       }
-      this.inputError = true
-      console.log('preencha o campo acima')
+
+      //console.log('preencha o campo acima')
     },
   },
   components: {},

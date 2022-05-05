@@ -2,7 +2,7 @@
 
     <div class="border">
         <!-- <img ref="bg" src="https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/05/certificado_cosmeticON_2022.png"> -->
-        <canvas ref="imagecanvas" class="w-full"></canvas>
+        <canvas ref="imagecanvas" class="w-full" id="canvas"></canvas>
         <img ref="imgConverted" src="">
         <button class="" @click="btnDownload">Download</button>
     </div>
@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import src from '@/static/cosmeticOn/certificate'
 export default {
   props:{
     name: String,
@@ -29,14 +30,19 @@ export default {
     let canvas = this.$refs.imagecanvas
     let ctx = canvas.getContext("2d")
     let bgImage = new Image()
-    bgImage.src = 'https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/05/certificado_cosmeticON_2022.png'
-    bgImage.setAttribute('crossorigin', 'anonymous')
+    //bgImage.src = 'http://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/05/certificado_cosmeticON_2022.png'
+    //let src = '~/static/cosmeticOn/certificate.js'
+    bgImage.src = src
+    //console.log(src)
+    // bgImage.setAttribute('crossorigin', 'anonymous')
+    // bgImage.setAttribute('Access-Control-Allow-Origin', '*')
 
     let text = this.name
 
     bgImage.onload = function () {
       canvas.width = bgImage.width
       canvas.height = bgImage.height
+      ctx.crossOrigin = "Anonymous";
       ctx.drawImage(bgImage, 0, 0)
 
 
@@ -76,19 +82,12 @@ export default {
   },
   methods: {
     btnDownload () {
-      // alert('Hello ')
-      console.log(this.$refs.imagecanvas)
-      console.log(this.canvas)
-      if (window.navigator.msSaveBlob) {
-        window.navigator.msSaveBlob(this.$refs.imagecanvas.msSaveBlob(), 'canvas-image.png')
-      } else {
-        const a = document.createElement('a')
-        document.body.appendChild(a)
-        a.href = this.$refs.imagecanvas.toDataURL('image/png', 1.0)
-        a.download = 'canvas-image.png'
-        a.click()
-        document.body.removeChild(a)
-      }
+      var canvas = document.getElementById("canvas");
+      let image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+      var link = document.createElement('a');
+      link.download = "my-image.png";
+      link.href = image;
+      link.click();
     },
     // download(canvas, filename) {
     //     /// create an "off-screen" anchor tag
