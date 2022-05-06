@@ -13,6 +13,7 @@
         <CosmeticONNextEvents />
 
         <CosmeticONTheFooter />
+
     </div>
 </template>
 

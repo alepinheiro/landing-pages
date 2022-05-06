@@ -7,14 +7,14 @@
 <template>
     <div>
         <div class="flex flex-col md:flex-row gap-4 w-fit mx-auto h-64 justify-center items-center" v-if="showButtons">
-            <a href="#" class="cosmeticon-btn"> Fotos Evento </a>
+            <a href="https://drive.google.com/drive/folders/17X3E9aRqtlMlcBChkLSW1ryOdW-mmPgO?usp=sharing" class="cosmeticon-btn"> Fotos Evento </a>
             <button class="cosmeticon-btn" @click="hideButtons"> Gere seu certificado</button>
             <a href="https://forms.gle/UDjC3qikhJSMdFGJA" class="cosmeticon-btn"> Pesquisa de satisfação</a>
         </div>
 
         <div v-if="!showButtons && !getCertificate" class="mx-auto h-64 flex flex-col justify-center gap-4 max-w-md px-8">
           <h2 class="mx-auto uppercase font-bold text-green-800">Gere sua certificação</h2>
-          <input v-model="name" @input="inputHandler" :class="{ 'border-red-400 focus:ring-red-200': inputError, 'border-green-400 focus:ring-green-200': !inputError }" type="text" class="border rounded text-center  py-2 focus:outline-none focus:ring " placeholder="Escreva seu nome como sairá no certificado">
+          <input v-model="name" @input="inputHandler" @keyup.enter="showCertificate" :class="{ 'border-red-400 focus:ring-red-200 bg-red-100 placeholder:text-red-600': inputError, 'border-green-400 focus:ring-green-200': !inputError }" type="text" class="border rounded text-center  py-2 focus:outline-none focus:ring " placeholder="Escreva seu nome como sairá no certificado">
           <button @click="showCertificate" class="cosmeticon-btn" >Gerar certificado</button>
         </div>
 
