@@ -7,9 +7,9 @@
     @apply px-4;
 }
 
-.swiper-banner img {
+/* .swiper-banner img {
     @apply md:rounded shadow;
-}
+} */
 
 .heat-rentalshop {
     @apply uppercase text-center my-4 md:text-left;
@@ -47,8 +47,10 @@
 <template>
     <div class="content">
         <div class="flex-1 md:my-8">
+
             <div class="swiper-banner">
-                <img src="http://unsplash.it/1080/600?random&gravity=center" alt="" />
+                <!-- <img src="http://unsplash.it/1080/600?random&gravity=center" alt="" /> -->
+                <h1 class="text-white font-2xl font-bold">próximo programa:</h1>
             </div>
 
             <div class="main-offer">

@@ -1,16 +1,26 @@
+<style>
+    .cosmeticon-btn{
+        @apply bg-green-700 hover:bg-green-800 px-4 py-2 rounded text-white uppercase text-center h-fit w-full whitespace-nowrap;
+    }
+</style>
+
 <template>
 
-    <div class="border">
+    <div class="border mx-8 rounded">
         <!-- <img ref="bg" src="https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/05/certificado_cosmeticON_2022.png"> -->
         <canvas ref="imagecanvas" class="w-full" id="canvas"></canvas>
         <img ref="imgConverted" src="">
-        <button class="" @click="btnDownload">Download</button>
+
+        <div class="flex flex-col md:flex-row p-4 gap-4">
+          <button class="cosmeticon-btn" @click="btnDownload">Download</button>
+          <a href="https://forms.gle/UDjC3qikhJSMdFGJA" class="cosmeticon-btn"> Pesquisa de satisfação</a>
+        </div>
     </div>
 
 </template>
 
 <script>
-import src from '@/static/cosmeticOn/certificate'
+import uriImage from '@/static/cosmeticOn/certificate'
 export default {
   props:{
     name: String,
@@ -30,14 +40,9 @@ export default {
     let canvas = this.$refs.imagecanvas
     let ctx = canvas.getContext("2d")
     let bgImage = new Image()
-    //bgImage.src = 'http://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/05/certificado_cosmeticON_2022.png'
-    //let src = '~/static/cosmeticOn/certificate.js'
-    bgImage.src = src
-    //console.log(src)
-    // bgImage.setAttribute('crossorigin', 'anonymous')
-    // bgImage.setAttribute('Access-Control-Allow-Origin', '*')
-
     let text = this.name
+
+    bgImage.src = uriImage
 
     bgImage.onload = function () {
       canvas.width = bgImage.width
@@ -51,14 +56,14 @@ export default {
       let szTotal = (endX - startX); //espaço total disponivel
 
       //variaveis do texto
-      ctx.font = '230px Arial';
+      ctx.font = '140px Arial';
       let wTexto = ctx.measureText(text).width;
 
       //calcula o espaco que tem disponível entre as margens laterais
       let calculaMargem = (szTotal - wTexto) / 2;
 
       let posX = calculaMargem + startX; //posicaoX inicial do texto
-      let posY = 1200; //posicaoy inicial do texto
+      let posY = 1250; //posicaoy inicial do texto
       let textoTotal = (wTexto + posX); //tamanho com recuo do texto
 
       //centraliza o texto de acordo com os outros elementos
@@ -85,35 +90,11 @@ export default {
       var canvas = document.getElementById("canvas");
       let image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
       var link = document.createElement('a');
-      link.download = "my-image.png";
+      link.download = "certificado-cosmeticon.png";
       link.href = image;
       link.click();
     },
-    // download(canvas, filename) {
-    //     /// create an "off-screen" anchor tag
-    //     var lnk = document.createElement('a'),
-    //         e;
 
-    //     /// the key here is to set the download attribute of the a tag
-    //     lnk.download = filename;
-
-    //     /// convert canvas content to data-uri for link. When download
-    //     /// attribute is set the content pointed to by link will be
-    //     /// pushed as "download" in HTML5 capable browsers
-    //     lnk.href = this.$refs.imagecanvas.toDataURL("image/png;base64");
-
-    //     /// create a "fake" click-event to trigger the download
-    //     if (document.createEvent) {
-    //         e = document.createEvent("MouseEvents");
-    //         e.initMouseEvent("click", true, true, window,
-    //             0, 0, 0, 0, 0, false, false, false,
-    //             false, 0, null);
-
-    //         lnk.dispatchEvent(e);
-    //     } else if (lnk.fireEvent) {
-    //         lnk.fireEvent("onclick");
-    //     }
-    // }
   }
 }
 </script>
