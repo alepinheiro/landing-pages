@@ -30,6 +30,14 @@ export default {
         type:'text/javascript',
         async: true,
         //src: "https://d335luupugsy2.cloudfront.net/js/loader-scripts/1bd8e36c-12a1-4e87-98f7-690ec23e057e-loader.js",
+      },{
+        type:'text/javascript',
+        async: true,
+        src: "https://www.googletagmanager.com/gtag/js?id=G-WV2CGB0X1H",
+      },{
+        type:'text/javascript',
+        async: true,
+        src: "https://www.googletagmanager.com/gtag/js?id=UA-108335612-1",
       },
     ],
   },
@@ -79,6 +87,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxt/http',
     '@nuxtjs/google-analytics',
+    '@nuxtjs/google-gtag',
 
     //https://github.com/WilliamDASILVA/nuxt-facebook-pixel-module
     ['nuxt-facebook-pixel-module', {
@@ -89,7 +98,13 @@ export default {
       disabled: false
     }],
   ],
-
+  'google-gtag':{
+    id: 'G-WV2CGB0X1H',
+    config:{
+      send_page_view: false,
+    },
+    debug: true,
+  },
   googleFonts: {
     families: {
       Outfit: true
