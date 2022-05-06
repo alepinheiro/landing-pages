@@ -20,6 +20,7 @@
     "nuxt-facebook-pixel-module": "^1.5.0",
     "vue": "^2.6.14",
     "vue-analytics": "^5.22.1",
+    "vue-gtag": "^2.0.1",
     "vue-server-renderer": "^2.6.14",
     "vue-ssr-carousel": "^1.4.0",
     "vue-template-compiler": "^2.6.14",

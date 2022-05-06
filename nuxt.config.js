@@ -37,11 +37,18 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [],
 
+
+  env: {
+    /** Configuración de google-analytics */
+    gaId: 'UA-108335612-1',
+  },
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/vue-the-mask.js',
     '~/plugins/axios.js',
-    '~/plugins/gtag',
+    // '~/plugins/gtag',
+    '~/plugins/vue-gtag.client.js',
+    '~/plugins/vue-gtag.server.js',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
