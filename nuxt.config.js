@@ -3,10 +3,10 @@ export default {
   target: 'static',
 
   //gera arquivos somente destes locais
-  generate: {
-    routes: ['/RentalShop/'],
-    routes: ['/HeccusTurbo/'],
-  },
+  // generate: {
+  //   routes: ['/RentalShop/'],
+  //   routes: ['/HeccusTurbo/'],
+  // },
 
   router: {
     base: '/'
@@ -66,6 +66,23 @@ export default {
     'vue-ssr-carousel/nuxt',
   ],
 
+  // Modules: https://go.nuxtjs.dev/config-modules
+  modules: [
+    // https://go.nuxtjs.dev/axios
+    '@nuxtjs/axios',
+    '@nuxt/http',
+    '@nuxtjs/google-analytics',
+
+    //https://github.com/WilliamDASILVA/nuxt-facebook-pixel-module
+    ['nuxt-facebook-pixel-module', {
+      /* module options */
+      track: 'PageView',
+      pixelId: '873102426546485',
+      autoPageView: true,
+      disabled: false
+    }],
+  ],
+
   googleFonts: {
     families: {
       Outfit: true
@@ -78,21 +95,7 @@ export default {
     id: 'UA-108335612-1'
   },
 
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
-    '@nuxt/http',
 
-    //https://github.com/WilliamDASILVA/nuxt-facebook-pixel-module
-    ['nuxt-facebook-pixel-module', {
-      /* module options */
-      track: 'PageView',
-      pixelId: '873102426546485',
-      autoPageView: true,
-      disabled: false
-    }],
-  ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {

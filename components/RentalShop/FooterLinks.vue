@@ -19,17 +19,17 @@
 <template>
     <div class="footer-links ">
         <ul>
-            <a href="#">
+            <a href="https://rentalmed.com.br/politica-de-trocas-e-devolucoes">
                 <li>
-                    Direitos autorais
+                    Política de trocas e devoluções
                 </li>
             </a>
-            <a href="#">
+            <a href="https://rentalmed.com.br/termos-e--condicoes">
                 <li>
-                    Termos de uso
+                    Termos e condições
                 </li>
             </a>
-            <a href="#">
+            <a href="https://rentalmed.com.br/politica-de-privacidade">
                 <li>
                     Política de privacidade
                 </li>

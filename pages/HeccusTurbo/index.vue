@@ -1,6 +1,6 @@
 <style>
     .mainContent{
-        @apply min-h-screen container mx-auto md:px-4 bg-cover;
+        @apply min-h-screen container md:min-w-full mx-0 md:px-4 bg-cover w-full;
         background-image: url('https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/04/TRILHA_Heccus_LandingPagebackground.webp')
     }
     .logo{

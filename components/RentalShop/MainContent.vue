@@ -1,34 +1,40 @@
 <style>
 .content {
-    @apply container m-auto flex flex-col md:flex-row;
+    @apply container m-auto flex flex-col md:flex-row justify-between;
 }
 
 .main-offer {
     @apply px-4;
 }
 
-/* .swiper-banner img {
-    @apply md:rounded shadow;
-} */
+.rentalshop-main-banner{
+    @apply max-w-md mx-auto p-4 flex flex-col md:px-0 md:mx-4 w-full text-center md:text-left;
+}
+.rentalshop-main-banner h1{
+    @apply my-2 first:mb-8;
+}
 
 .heat-rentalshop {
-    @apply uppercase text-center my-4 md:text-left;
+    @apply uppercase text-center my-4 md:text-left text-white;
 }
 
 .headline-h1 h1 {
-    @apply text-xl font-bold text-center md:text-left my-4;
+    @apply text-xl font-bold text-center md:text-left my-4 text-white;
 }
 
 .offer-text {
-    @apply text-center md:text-left;
+    @apply text-center md:text-left text-white;
 }
 
 .registrationForm {
-    @apply bg-white/30 mx-4 rounded shadow;
+    @apply bg-white/40 mx-4 rounded shadow pt-1;
 }
+/* .title-form {
+    @apply bg-white rounded m-4;
+} */
 
 .title-form h1 {
-    @apply text-center py-4 text-xl font-bold;
+    @apply text-center py-4 text-xl  ;
 }
 
 .divisor {
@@ -46,11 +52,12 @@
 
 <template>
     <div class="content">
-        <div class="flex-1 md:my-8">
+        <div class="flex flex-col flex-1 md:my-8 justify-center my-auto max-w-md mx-auto md:max-w-xl">
 
-            <div class="swiper-banner">
-                <!-- <img src="http://unsplash.it/1080/600?random&gravity=center" alt="" /> -->
-                <h1 class="text-white font-2xl font-bold">próximo programa:</h1>
+            <div class="rentalshop-main-banner">
+                <h1 class="text-white text-4xl font-bold">próximo programa:</h1>
+                <h1 class="text-white text-4xl">12 de maio - quinta</h1>
+                <h1 class="text-white text-4xl">20h30</h1>
             </div>
 
             <div class="main-offer">
@@ -59,8 +66,7 @@
                 </div>
 
                 <div class="heat-rentalshop">
-                    o seu programa de ofertas da estética<br />
-                    quinta - 12 de maio - 20h30
+                    o seu programa de ofertas da estética
                 </div>
 
                 <div class="offer-text">
@@ -75,10 +81,10 @@
             </div>
         </div>
 
-        <div class="flex-1 my-8">
+        <div class="flex-1 my-8 max-w-md mx-auto">
             <div class="registrationForm">
                 <div class="title-form">
-                    <h1>Cadastre-se para receber no ZAP</h1>
+                    <h1>Cadastre-se e receba um <strong class="font-bold">SPOILER</strong> no seu <strong>WhatsApp</strong> </h1>
                 </div>
                 <div class="form-group">
                     <RentalShopRegistrationForm />

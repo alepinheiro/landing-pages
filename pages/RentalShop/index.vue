@@ -1,6 +1,6 @@
 <style>
     body{
-         @apply bg-white ;
+         @apply bg-black ;
     }
 
 </style>
@@ -8,15 +8,17 @@
 <template>
 
     <div class="bg-cover bg-rentalshop">
+        <div class="bg-black/20">
 
-        <RentalShopTopBanner />
+            <RentalShopTopBanner />
 
-        <RentalShopMainContent />
+            <RentalShopMainContent />
 
-        <RentalShopIconGroup />
+            <RentalShopIconGroup />
 
-        <RentalShopFooterLinks />
+            <RentalShopFooterLinks />
 
+        </div>
     </div>
 
 </template>
@@ -31,7 +33,7 @@
             return {
                 title: '[LIVE] O seu programa de Ofertas - RentalShop',
                 description: 'As melhores ofertas de estética',
-                keywords: 'RentalShop RentalMed Live',
+                keywords: 'RentalShop RentalMed Live Ofertas',
                 url: 'https://rentalmed.com.br/rentalshop',
                 image: 'https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/04/TRILHA_Heccus_Landing_Page_Ebook.png',
             }
@@ -52,7 +54,7 @@
 
                     { hid: 'og:image', property: 'og:image', content: this.image },
                     { hid: 'og:image:image:secure_url', property: 'og:image:image:secure_url', content: this.image },
-                    { hid: 'og:image:type', property: 'og:image:type', content: 'image/png' },
+                    { hid: 'og:image:type', property: 'og:image:type', content: 'image/jpg' },
                     { property: 'og:image:width', content: "300" },
                     { property: 'og:image:height', content: "300" },
 

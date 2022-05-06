@@ -85,7 +85,7 @@
 
         <div class="checkbox-wrapper">
             <input checked id="terms-conditions" type="checkbox" value="" class="checkbox-input checked:bg-orange-500" >
-            <label for="terms-conditions" class="ml-2 text-sm font-medium text-gray-900 ">Estou de acordo com os <a href="#" class="text-orange-600 hover:underline ">termos e condições</a>.</label>
+            <label for="terms-conditions" class="ml-2 text-sm font-medium text-gray-900 ">Estou de acordo com os <a href="https://rentalmed.com.br/termos-e--condicoes" class="text-orange-600 hover:underline ">termos e condições</a>.</label>
         </div>
 
         <div class="checkbox-wrapper">
@@ -124,7 +124,6 @@
                 jobInput: null,
                 loadingStatus: false,
                 form_name: '[EQP][RENTALSHOP]',
-                //apiResponse: false,
                 apiStatus: null,
                 apiMessage: '',
                 isSuccess: false,
