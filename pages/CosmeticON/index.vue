@@ -80,5 +80,8 @@ export default {
         'https://wa.me/5548985050350?text=Estou+na+Landing+Page+do+%2AHeccus+Turbo%2A+e+gostaria+de+mais+informa%C3%A7%C3%B5es+sobre+este+aparelho.'
     },
   },
+  mounted(){
+    this.$ga.page('/' + this.$route.name)
+  }
 }
 </script>

@@ -29,9 +29,9 @@
 .registrationForm {
     @apply bg-white/40 mx-4 rounded shadow pt-1;
 }
-/* .title-form {
-    @apply bg-white rounded m-4;
-} */
+.title-form {
+    @apply px-4;
+}
 
 .title-form h1 {
     @apply text-center py-4 text-xl  ;

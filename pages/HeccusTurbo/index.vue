@@ -101,6 +101,9 @@
                 image: 'https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/04/TRILHA_Heccus_Landing_Page_Ebook.png',
             }
         },
+        mounted(){
+            this.$ga.page('/' + this.$route.name)
+        },
         head() {
             return {
                 title: this.title,

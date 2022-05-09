@@ -1,18 +1,7 @@
-import Vue from 'vue'
-import VueGtag from 'vue-gtag'
+import Vue from 'vue';
+import VueGtag from 'vue-gtag';
 
-/**
- * @type {import('@nuxt/types').Plugin}
- */
-const vueGtag = ({ app, env }) => {
-  Vue.use(
-    VueGtag,
-    {
-      config: { id: env.gaId },
-      disabled: true, // Here you could ignore user privacy and set to true
-    },
-    app.router
-  )
-}
-
-export default vueGtag
+Vue.use(VueGtag, {
+    config: { id: 'UA-108335612-1' },
+    appName: 'VUE_DEVELOPMENT_RENTALMED',
+});

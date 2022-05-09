@@ -64,6 +64,9 @@
                 image: 'http://unsplash.it/300/300?random&gravity=center',
             }
         },
+        mounted(){
+            this.$ga.page('/dev-lp')
+        },
         head() {
             return {
                 title: this.title,

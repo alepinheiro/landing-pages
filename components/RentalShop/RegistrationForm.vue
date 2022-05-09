@@ -42,6 +42,7 @@
             type="text"
             name="name"
             class="input-form peer"
+            v-model="nameInput"
             placeholder=" "
             required=""
           >
@@ -76,7 +77,7 @@
 
         <div class="input-wrapper ">
           <label for="jobs" class="block mb-2 text-sm font-medium text-gray-900 ">Você é:</label>
-          <select id="jobs" class="bg-transparent border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5 focus:outline-none ">
+          <select id="jobs" class="bg-transparent border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5 focus:outline-none "  v-model="jobInput">
             <option v-for="job in jobs" :value="job.value">
                 {{job.text}}
             </option>
@@ -156,6 +157,7 @@
                 }
 
                 //this.apiResponse = !this.apiResponse
+                // console.log(formData)
 
                 axios
                     .post('https://api.rentalmed.com.br/LandingPage/', formData)
