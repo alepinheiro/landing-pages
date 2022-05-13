@@ -45,6 +45,12 @@
                     </li>
                 </NuxtLink>
 
+                <NuxtLink to="/HomeRentalMed/">
+                    <li>
+                        Home RentalMed
+                    </li>
+                </NuxtLink>
+
             </ul>
         </div>
     </div>

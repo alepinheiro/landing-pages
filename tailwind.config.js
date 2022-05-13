@@ -10,6 +10,9 @@ module.exports = {
   content: ['./node_modules/flowbite/**/*.js'],
   theme: {
     extend: {
+      colors:{
+        'rtmd-primary': '#ef476f'
+      },
       fontFamily: {
         sans: ["Outfit", ...defaultTheme.fontFamily.sans]
       },
