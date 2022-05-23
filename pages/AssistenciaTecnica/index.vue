@@ -28,35 +28,7 @@
 <template>
   <div>
 
-    <!-- top Banner -->
-    <div class="bg-purple-600 text-white text-center py-2 ">
-      <p class=""> <strong>10% de desconto</strong> na primeira compra!</p>
-    </div>
 
-    <!-- navbar -->
-
-    <nav class="bg-white flex flex-row h-14 justify-between px-4 py-2 shadow-xl border-b-2 border-zinc-400">
-
-      <!-- logo -->
-      <div class="flex">
-        <img src='http://unsplash.it/700/100?random&gravity=center' alt=''/>
-      </div>
-
-      <!-- icons -->
-      <div class="flex flex-row items-center gap-4">
-
-        <!-- cart icon -->
-        <div class="w-8 h-8 text-purple-600">
-          <IconsCart />
-        </div>
-
-        <!-- menu icon -->
-        <div class="w-8 h-8 text-purple-600">
-          <IconsMenu />
-        </div>
-
-      </div>
-    </nav>
 
     <!-- main banner -->
     <div class="mx-auto relative mb-20">

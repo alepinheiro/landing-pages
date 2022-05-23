@@ -51,6 +51,12 @@
                     </li>
                 </NuxtLink>
 
+                <NuxtLink to="/IbramedExperience/">
+                    <li>
+                        Ibramed Experience
+                    </li>
+                </NuxtLink>
+
             </ul>
         </div>
     </div>
