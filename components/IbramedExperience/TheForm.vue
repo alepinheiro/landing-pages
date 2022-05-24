@@ -197,7 +197,7 @@
     }
 
     .form{
-        @apply bg-purple-900/60 p-6 rounded text-white shadow-md shadow-purple-800/60;
+        @apply bg-purple-900/60 p-6 rounded text-white shadow-md shadow-purple-800/60 md:w-6/12 md:mx-auto;
     }
     .input-group{
         @apply flex flex-col mb-4;
