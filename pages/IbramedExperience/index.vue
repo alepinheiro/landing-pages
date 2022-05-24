@@ -47,6 +47,11 @@ export default {
             setTimeout(() => {
                 this.copied = false
             }, 2000)
+        },
+        scrollTo() {
+                document.getElementById('#subscribe').scrollIntoView({
+                behavior: "smooth"
+            })
         }
     },
     components: { TheHeading, TheForm, Icon }
@@ -60,8 +65,8 @@ export default {
     <div class="flex flex-col py-10 gap-4 px-5 container md:w-6/12 mx-auto">
         <div class="flex flex-row">
 
-            <div class="w-1/3 m-auto flex flex-col items-center gap-2 my-auto">
-                <img src='https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/05/id-ibramed-experience.webp' alt='' class="w-32 h-32 mx-auto"/>
+            <div class="md:w-1/3 w-1/2 m-auto flex flex-col items-center gap-2 my-auto">
+                <img src='https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/05/id-ibramed-experience.webp' alt='' class="w-2/3 mx-auto"/>
                 <div class="flex flex-col items-center text-white text-xs gap-2">
                     <p>REALIZAÇÃO</p>
                     <div class="flex flex-row justify-center items-center gap-2" >
@@ -71,11 +76,14 @@ export default {
                 </div>
             </div>
 
-            <div class="w-2/3 flex flex-col gap-2">
+            <div class="md:w-2/3 w-1/2 flex flex-col gap-2">
                 <img src="https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/05/heading-1.webp" alt="" srcset="">
-                <div class="bg-purple-900/80 p-4 rounded-lg flex flex-col">
-                    <img src="https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/05/heading-2.webp" alt="" srcset="">
-                    <button class="bg-orange-500 text-white rounded-full px-6 py-1 uppercase font-bold mt-4 mx-auto">
+                <div class="bg-purple-900/80 p-4 rounded-lg flex flex-col gap-4 my-4">
+                    <img src="https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/05/heading-2.webp" alt="" srcset="" class="md:px-10">
+                    <button
+                        @click="scrollTo"
+                        class="bg-orange-500 text-white rounded-full px-6 py-1 uppercase font-bold mt-4 mx-auto text-xs md:text-base"
+                    >
                         Garantir minha vaga
                     </button>
                 </div>
@@ -107,12 +115,12 @@ export default {
                 Ah! E as surpresas não param por aí: tanto o conteúdo teórico quanto o prático serão apresentados com o uso de aparelhos líderes do mercado e aprovados pelos maiores nomes da estética: LYRA e VEGA!
                 Isso mesmo! Você terá TODO ESSE CONTEÚDO PRESENCIAL e na PRÁTICA por apenas R$87,00
             </p>
-            <a
-                href="#form"
+            <button
+                @click="scrollTo"
                 class="bg-orange-500 text-white rounded-full px-6 py-1 uppercase absolute -bottom-4 inset-x-0 w-fit mx-auto"
             >
                 Garantir minha vaga
-            </a>
+            </button>
         </div>
     </div>
 
@@ -147,7 +155,7 @@ export default {
     </div>
 
 
-    <div class="px-5 pt-14" :class="{'mb-14': !pixcode}">
+    <div id="#subscribe" class="px-5 pt-14" :class="{'mb-14': !pixcode}">
         <TheForm @form-data="getPixCode" />
     </div>
 
