@@ -57,6 +57,12 @@
                     </li>
                 </NuxtLink>
 
+                <NuxtLink to="/EsteticaInsul/">
+                    <li>
+                        Estética In Sul
+                    </li>
+                </NuxtLink>
+
             </ul>
         </div>
     </div>
