@@ -31,16 +31,16 @@
             </div>
             <div class="grid gap-4 grid-flow-row mx-auto w-fit py-4 text-white">
 
-                <a href="https://www.esteticainsul.com.br/eisul2022/inscricao/feira_323/">
+                <a href="https://wa.me/5548985050350?text=Olá, gostaria de mais informações sobre o ingresso do Estética In Sul">
                     <button class="w-full h-12 rounded bg-[#df0537] hover:bg-[#920324] uppercase font-bold flex flex-row items-center gap-2 px-4 justify-center" >
                         <div class="w-6 h-6">
                             <Icon icon="fontisto:ticket-alt" height="100%"/>
                         </div>
-                        <span>Ingressos para congressos</span>
+                        <span>Comprar Ingresso</span>
                     </button>
                 </a>
 
-                <a href="#">
+                <a href="https://www.esteticainsul.com.br/eisul2022/inscricao/feira_323/">
                     <button class="w-full h-12 rounded bg-zinc-400 hover:bg-[#920324] uppercase font-bold flex flex-row items-center gap-2 px-4 justify-center" >
                         <div class="w-6 h-6">
                             <Icon icon="clarity:store-line" height="100%"/>
@@ -49,7 +49,7 @@
                     </button>
                 </a>
 
-                <a href="#">
+                <a href="https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/05/comunicado-estetica-in-sul-rentalmed.pdf">
                     <button class="w-full h-12 rounded bg-zinc-400 hover:bg-[#920324] uppercase font-bold flex flex-row items-center gap-2 px-4 justify-center" >
                         <div class="w-6 h-6">
                             <Icon icon="carbon:document-download" height="100%"/>
@@ -70,12 +70,12 @@
             >
             <span class="text-sm uppercase">Mais informações</span>
 
-            <a href="https://wa.me/5548999050170?text=Olá, gostaria de mais informações sobre o Estética In Sul">
+            <a href="https://wa.me/5548985050350?text=Olá, gostaria de mais informações sobre o Estética In Sul">
                 <button class="w-fit h-12 rounded bg-[#df0537] hover:bg-[#920324] uppercase font-bold flex flex-row items-center gap-2 px-4 justify-center" >
                     <div class="w-5 h-5">
                         <Icon icon="akar-icons:whatsapp-fill" height="100%"/>
                     </div>
-                    <span>48 99905-0170</span>
+                    <span>48 98505-0350</span>
                 </button>
             </a>
 
