@@ -41,6 +41,11 @@ export default {
         async: true,
         src: "https://www.googletagmanager.com/gtag/js?id=UA-108335612-1",
       },
+      {
+        type:'text/javascript',
+        async: true,
+        src: "https://www.googletagmanager.com/gtag/js?id=UA-108335612-1",
+      },
     ],
   },
 
@@ -81,6 +86,8 @@ export default {
 
     //https://github.com/BKWLD/vue-ssr-carousel
     'vue-ssr-carousel/nuxt',
+
+    '@nuxtjs/google-analytics',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -119,6 +126,9 @@ export default {
     id: 'UA-108335612-1',
     autoTracking: {
       screenview: true
+    },
+    debug: {
+      enabled: true
     }
   },
 

@@ -91,7 +91,7 @@
 </script>
 
 <template>
-    <form id="form" class="form" @submit="submitForm" :name="form_name">
+    <form id="form" class="form" @submit.prevent="submitForm" :name="form_name">
         <div class="input-group">
             <label for="name">Nome completo</label>
             <input

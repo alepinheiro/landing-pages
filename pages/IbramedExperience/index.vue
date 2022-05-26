@@ -1,5 +1,5 @@
 <script>
-
+    import { page } from 'vue-analytics'
     import { Icon } from '@iconify/vue2'
     import { pix, qrcode } from '@klawdyo/pix.js'
     import TheHeading from '../../components/IbramedExperience/TheHeading.vue'
@@ -44,7 +44,7 @@ export default {
         }
     },
     mounted(){
-        this.$ga.page('/' + 'ibramed-experience-2')
+        this.$ga.page(this.$router)
     },
     methods: {
         getQrCode: async function (data){
@@ -75,7 +75,7 @@ export default {
                 this.copied = false
             }, 2000)
         },
-        scrollTo() {
+        scrollTo: function () {
                 document.getElementById('#subscribe').scrollIntoView({
                 behavior: "smooth"
             })
