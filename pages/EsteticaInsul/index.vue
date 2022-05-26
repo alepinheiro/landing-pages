@@ -2,6 +2,40 @@
     import {Icon} from '@iconify/vue2'
 
     export default {
+        data: function () {
+            return {
+                title: 'Participe do Estética in Sul - RentalMed',
+                description: 'O evento reunirá profissionais, estudantes e investidores do segmento de ESTÉTICA, BELEZA e BEM ESTAR',
+                keywords: 'Feira Estética in Sul RentalMed WorkShop ',
+                url: 'https://rentalmed.com.br/estetica-in-sul',
+                image: 'https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/05/banner-mobile_einsul-og.jpg',
+            }
+        },
+        head() {
+            return {
+            title: this.title,
+            meta: [
+                    { charset: 'utf-8' },
+                    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+                    { hid: 'title', property: 'title', name: 'title', content: this.title },
+                    { hid: 'description', property: 'description', name: 'description', content: this.description, },
+                    { hid: 'keywords', property: 'keywords', name: 'keywords', content: this.keywords, },
+
+                    { hid: 'og-title', property: 'og:title', content: this.title },
+                    { hid: 'og-description', property: 'og:description', content: this.description, },
+                    { hid: 'og-url', property: 'og:url', content: this.url },
+
+                    { hid: 'og:image', property: 'og:image', content: this.image },
+                    { hid: 'og:image:image:secure_url', property: 'og:image:image:secure_url', content: this.image, },
+                    { hid: 'og:image:type', property: 'og:image:type', content: 'image/jpg', },
+
+                    { property: 'og:image:width', content: '300' },
+                    { property: 'og:image:height', content: '300' },
+
+                    { hid: 'og-type', property: 'og:type', content: 'website' },
+                ]
+            }
+        },
         components: {
             Icon
         }

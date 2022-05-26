@@ -17,7 +17,7 @@
                 apiMessage: '',
                 isSuccess: false,
                 isError: false,
-                apiMessageSuccess: 'Sucesso! Em alguns instantes você receberá o conteúdo em seu WhatsApp.',
+                apiMessageSuccess: 'Sucesso! Em alguns instantes você receberá uma confimação em seu WhatsApp.',
                 apiMessageError: 'Erro ao cadastrar os dados! Tente novamente em alguns instantes.',
                 jobs:[
                     {text: 'Esteticista', value: 'esteticista'},
@@ -92,8 +92,6 @@
 
 <template>
     <form id="form" class="form" @submit="submitForm" :name="form_name">
-        <!-- <h1 class="text-4xl font-bold text-center mb-2">Inscreva-se</h1>
-        <p class="mb-4 text-center">Pague com pix ou cartão </p> -->
         <div class="input-group">
             <label for="name">Nome completo</label>
             <input
@@ -118,7 +116,7 @@
         </div>
 
         <div class="input-group">
-            <label for="city">Cidade</label>
+            <label for="city">Cidade/UF</label>
             <input
                 type="text"
                 name="city"
@@ -197,7 +195,7 @@
     }
 
     .form{
-        @apply bg-purple-900/60 p-6 rounded text-white shadow-md shadow-purple-800/60 md:w-6/12 md:mx-auto;
+        @apply bg-purple-900/60 p-6 rounded text-white shadow-md shadow-purple-800/60 max-w-3xl w-full md:mx-auto;
     }
     .input-group{
         @apply flex flex-col mb-4;

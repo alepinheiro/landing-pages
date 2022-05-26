@@ -11,35 +11,59 @@ export default {
             pixcode: null,
             qrcode: null,
             copied: false,
+            title: 'Participe do WorkShop Ibramed Experience - RentalMed',
+            description: 'Você aprenderá todas as diversas possibilidades que o Laser de Diodo e a Luz Intensa Pulsada podem trazer à sua carreira',
+            keywords: 'Laser de Diodo Luz Intensa Pulsada RentalMed WorkShop',
+            url: 'https://rentalmed.com.br/ibramed-experience',
+            image: 'https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/05/Id-ibramed-experience.png',
+        }
+    },
+    head() {
+        return {
+        title: this.title,
+        meta: [
+                { charset: 'utf-8' },
+                { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+                { hid: 'title', property: 'title', name: 'title', content: this.title },
+                { hid: 'description', property: 'description', name: 'description', content: this.description, },
+                { hid: 'keywords', property: 'keywords', name: 'keywords', content: this.keywords, },
+
+                { hid: 'og-title', property: 'og:title', content: this.title },
+                { hid: 'og-description', property: 'og:description', content: this.description, },
+                { hid: 'og-url', property: 'og:url', content: this.url },
+
+                { hid: 'og:image', property: 'og:image', content: this.image },
+                { hid: 'og:image:image:secure_url', property: 'og:image:image:secure_url', content: this.image, },
+                { hid: 'og:image:type', property: 'og:image:type', content: 'image/png', },
+
+                { property: 'og:image:width', content: '300' },
+                { property: 'og:image:height', content: '300' },
+
+                { hid: 'og-type', property: 'og:type', content: 'website' },
+            ]
         }
     },
     methods: {
         getQrCode: async function (data){
             this.qrcode = await qrcode({
-                key: '+5547999493409',
+                key: '13238669000168',
                 name: data.name,
                 city: data.city,
-                txId: data.phone.slice(data.phone.length - 4, data.phone.length ),
-                amount: 0.99,
+                txId: data.phone.slice(data.phone.length - 4, data.phone.length ) + new Date().getHours() + new Date().getMinutes() ,
+                amount: 87,
                 description: 'WorkShop RentalMed 09/07/22',
             })
-
-            console.log(data)
-
-
         },
         getPixCode: async function (data){
             this.pixcode = await pix({
-                key: '+5547999493409',
+                key: '13238669000168',
                 name: data.name,
                 city: data.city,
-                txId: data.phone.slice(data.phone.length - 4, data.phone.length ),
-                amount: 0.99,
+                txId: data.phone.slice(data.phone.length - 4, data.phone.length ) + new Date().getHours() + new Date().getMinutes() ,
+                amount: 87,
                 description: 'WorkShop RentalMed 09/07/22',
             })
             this.getQrCode(data)
-            console.log(data)
-
         },
         copyToClipboard: async function() {
             await navigator.clipboard.writeText(this.code)
@@ -62,8 +86,8 @@ export default {
 <template>
  <div class="w-full flex flex-col bg-ibramed-experience bg-cover font-metropolis">
 
-    <div class="flex flex-col py-10 gap-4 px-5 container md:w-6/12 mx-auto">
-        <div class="flex flex-row">
+    <div class="flex flex-col py-10 gap-4 px-5 w-full">
+        <div class="flex flex-row max-w-3xl mx-auto">
 
             <div class="md:w-1/3 w-1/2 m-auto flex flex-col items-center gap-2 my-auto">
                 <img src='https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/05/id-ibramed-experience.webp' alt='' class="w-2/3 mx-auto"/>
@@ -99,14 +123,14 @@ export default {
         </div>
     </div>
 
-    <div class="text-center my-2 flex flex-col gap-4 text-white px-5">
+    <div class="text-center my-4 flex flex-col gap-4 text-white px-5">
         <p>Participe do</p>
         <img src="https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/05/heading-1.webp" alt="" srcset="" class="h-24 object-contain">
         <img src="https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/05/09-de-julho-Presencial-Florianopolis.webp" alt="" srcset="" class="h-12 object-contain">
         <!-- <img src="https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/05/heading-1.webp" alt="" srcset="" class="h-24 object-contain"> -->
     </div>
 
-    <div class="px-5 md:w-6/12 md:mx-auto">
+    <div class="max-w-3xl md:mx-auto px-5 md:p-0">
         <div class="bg-zinc-300/20 w-full h-fit rounded-lg relative">
             <p class="px-4 pb-8 pt-4 text-white text-center">
                 O que você vai aprender no IBRAMED EXPERIENCE Laser de Diodo e LIP :
@@ -132,7 +156,7 @@ export default {
             <p>Prof.ª Esp</p>
             <p><b>Renata Gomes Moreira</b></p>
         </div>
-        <div class="bg-zinc-300/60 w-full relative p-4 rounded-lg text-white md:w-6/12 md:mx-auto text-center">
+        <div class="bg-zinc-300/60 max-w-3xl relative p-4 rounded-lg text-white w-full md:mx-auto text-center">
             <p> Fisioterapeuta;<br>
                 Especialista em MBA em Dermatofuncional, Estética e Cosmética;<br>
                 Especialização em andamento no curso de MBA em Ortopedia e Traumatologia;<br>
@@ -159,38 +183,40 @@ export default {
         <TheForm @form-data="getPixCode" />
     </div>
 
-    <div v-if="pixcode" class="bg-purple-900/80 my-4 mx-5 rounded-lg p-6" >
-        <p class="text-white text-center mb-4">Em alguns instantes você receberá uma mensagem em seu WhatsApp confirmando sua inscrição.</p>
-        <div class="flex flex-row items-center border border-purple-400 rounded-lg text-white">
+    <div class="max-w-3xl w-full mx-auto px-5 md:p-0">
+        <div v-if="pixcode" class="bg-purple-900/80 my-10 rounded-lg p-6  " >
+            <p class="text-white text-center mb-4">Em alguns instantes você receberá uma mensagem em seu WhatsApp confirmando sua pré-inscrição.</p>
+            <div class="flex flex-row items-center border border-purple-400 rounded-lg text-white">
 
-            <button @click="copyToClipboard" class="w-10 h-10 p-2 hover:bg-purple-800 rounded-l-lg">
-                <Icon icon="ep:copy-document" height="100%"/>
-            </button>
+                <button @click="copyToClipboard" class="w-10 h-10 p-2 hover:bg-purple-800 rounded-l-lg">
+                    <Icon icon="ep:copy-document" height="100%"/>
+                </button>
 
 
-            <input
-                class="w-full bg-transparent border-none rounded-r-lg transition-all duration-300"
-                :class="{'bg-green-500': copied}"
-                type="text"
-                name="pixCode"
-                id="pixCode"
-                readonly
-                v-model="pixcode"
-                v-on:focus="copyToClipboard"
-            >
-        </div>
-        <p class="text-center text-white my-2" v-if="copied">🎉 Copiado para área de transferência 🎉</p>
-        <img :src="qrcode" alt="" srcset="" class="mx-auto py-4 rounded">
-
+                <input
+                    class="w-full bg-transparent border-none rounded-r-lg transition-all duration-300"
+                    :class="{'bg-green-500': copied}"
+                    type="text"
+                    name="pixCode"
+                    id="pixCode"
+                    readonly
+                    v-model="pixcode"
+                    v-on:focus="copyToClipboard"
+                >
+            </div>
+            <p class="text-center text-white my-2" v-if="copied">🎉 Copiado para área de transferência 🎉</p>
+            <img :src="qrcode" alt="" srcset="" class="mx-auto py-4 rounded">
+            <p class="text-center text-white mb-4">Sua inscrição será confirmada mediante envio do compovante de pagamento.</p>
             <button class="w-fit hover:bg-green-800 rounded-lg bg-green-600 flex flex-row text-white items-center py-2 px-4 gap-2 mx-auto">
                 <div class="w-6 h-6 ">
                     <Icon icon="akar-icons:whatsapp-fill" height="100%"/>
                 </div>
                 <span>Enviar comprovante de pagemento</span>
             </button>
+        </div>
     </div>
 
-    <div class="bg-purple-900 py-4">
+    <div class="bg-purple-900 py-10">
         <div class="flex flex-row justify-center items-center gap-2" >
             <img src='https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/05/logo-ibramed.webp' alt='' class=" object-cover h-10"/>
             <img src='https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/05/logo-rentalmed.webp' alt='' class="object-cover h-10"/>

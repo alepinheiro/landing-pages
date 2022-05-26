@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/HomeRentalMed", {data:[{}],fetch:{},mutations:void 0});

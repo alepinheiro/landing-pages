@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/CosmeticON", {data:[{}],fetch:{},mutations:void 0});
