@@ -1,13 +1,12 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
-  ssr: true,
 
   //gera arquivos somente destes locais
-  generate: {
-    routes: ['/AssistenciaTecnica'],
-    //routes: ['/HeccusTurbo/'],
-  },
+  // generate: {
+  //   routes: ['/AssistenciaTecnica'],
+  //   routes: ['/HeccusTurbo/'],
+  // },
 
   router: {
     base: '/'

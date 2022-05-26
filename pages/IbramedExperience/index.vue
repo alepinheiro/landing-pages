@@ -14,7 +14,7 @@ export default {
             title: 'Participe do WorkShop Ibramed Experience - RentalMed',
             description: 'Você aprenderá todas as diversas possibilidades que o Laser de Diodo e a Luz Intensa Pulsada podem trazer à sua carreira',
             keywords: 'Laser de Diodo Luz Intensa Pulsada RentalMed WorkShop',
-            url: 'https://rentalmed.com.br/ibramed-experience',
+            url: 'https://rentalmed.com.br/ibramed-experience-2',
             image: 'https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/05/Id-ibramed-experience.png',
         }
     },
@@ -44,8 +44,7 @@ export default {
         }
     },
     mounted(){
-        this.$ga.page('/' + this.$route.name)
-        console.log(this.$route.name)
+        this.$ga.page('/' + 'ibramed-experience-2')
     },
     methods: {
         getQrCode: async function (data){
