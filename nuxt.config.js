@@ -116,7 +116,10 @@ export default {
     jit: true
   },
   googleAnalytics: {
-    id: 'UA-108335612-1'
+    id: 'UA-108335612-1',
+    autoTracking: {
+      screenview: true
+    }
   },
 
 
