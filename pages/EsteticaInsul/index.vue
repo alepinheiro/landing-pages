@@ -13,8 +13,8 @@
         },
         head() {
             return {
-            title: this.title,
-            meta: [
+                title: this.title,
+                meta: [
                     { charset: 'utf-8' },
                     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
                     { hid: 'title', property: 'title', name: 'title', content: this.title },
@@ -35,6 +35,9 @@
                     { hid: 'og-type', property: 'og:type', content: 'website' },
                 ]
             }
+        },
+        mounted(){
+            this.$ga.page('/' + this.$route.name)
         },
         components: {
             Icon
