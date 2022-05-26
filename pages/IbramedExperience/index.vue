@@ -45,6 +45,7 @@ export default {
     },
     mounted(){
         this.$ga.page('/' + this.$route.name)
+        console.log(this.$route.name)
     },
     methods: {
         getQrCode: async function (data){
