@@ -2,6 +2,8 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  ssr: true,
+
   //gera arquivos somente destes locais
   // generate: {
   //   routes: ['/AssistenciaTecnica'],
@@ -62,6 +64,7 @@ export default {
     '~/plugins/vue-the-mask.js',
     '~/plugins/axios.js',
     '~/plugins/gtag',
+    '~/plugins/vue-the-mask.js',
     // '~/plugins/vue-gtag.client.js',
     // '~/plugins/vue-gtag.server.js',
   ],

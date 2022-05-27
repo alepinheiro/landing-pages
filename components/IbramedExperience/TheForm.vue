@@ -1,5 +1,4 @@
 <script>
-    import {mask} from 'vue-the-mask'
     import axios from 'axios'
 
     export default{
@@ -30,8 +29,7 @@
             }
         },
         methods: {
-            async submitForm(e){
-                e.preventDefault();
+                submitForm(){
                 const formData = {
                     name: this.nameInput + ' | ' + this.jobInput,
                     phone: '55' + this.whatsappInput,
@@ -84,18 +82,15 @@
         },
         mounted(){},
         components: {},
-        directives: {
-            mask
-        }
     }
 </script>
 
 <template>
-    <form id="form" class="form" @submit.prevent="submitForm" :name="form_name">
+    <form id="form" class="ie-form" v-on:submit.prevent="submitForm" :name="form_name">
         <div class="input-group">
             <label for="name">Nome completo</label>
             <input
-                type="text"
+                type="tel"
                 name="name"
                 id="name"
                 placeholder="Nome"
@@ -106,7 +101,9 @@
 
         <div class="input-group">
             <label for="whatsapp">WhatsApp</label>
-            <the-mask :mask="['(##) ####-####', '(##) #####-####']"
+            <the-mask
+                type="tel"
+                :mask="['(##) ####-####', '(##) #####-####']"
                 name="whatsapp"
                 id="whatsapp"
                 placeholder="WhatsApp com DDD"
@@ -186,7 +183,7 @@
 
 
 
-<style scoped>
+<style>
     .fade-enter-active, .fade-leave-active {
         transition: opacity 0.5s ease;
     }
@@ -194,7 +191,7 @@
         opacity: 0;
     }
 
-    .form{
+    .ie-form{
         @apply bg-purple-900/60 p-6 rounded text-white shadow-md shadow-purple-800/60 max-w-3xl w-full md:mx-auto;
     }
     .input-group{
@@ -227,14 +224,13 @@
     .checkbox label{
         @apply ml-3 text-sm font-medium;
     }
-    .form button{
-        @apply  w-full m-auto bg-orange-700 rounded p-2 uppercase flex flex-row items-center justify-center;
+    .ie-form button{
+        @apply  w-full m-auto bg-orange-600 hover:bg-orange-700 rounded p-2 uppercase flex flex-row items-center justify-center;
     }
 
     .btn-loading{
         @apply w-14 h-14 px-2;
     }
-
     .msg-box{
         @apply mt-4 text-center rounded p-2;
     }
