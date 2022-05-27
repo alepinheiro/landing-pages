@@ -138,11 +138,10 @@ export default {
     <div class="max-w-3xl md:mx-auto px-5 md:p-0">
         <div class="bg-zinc-300/20 w-full h-fit rounded-lg relative">
             <p class="px-4 pb-8 pt-4 text-white text-center">
-                O que você vai aprender no IBRAMED EXPERIENCE Laser de Diodo e LIP :
-                Nesta imersão de 7 horas, você aprenderá todos os pilares que compõem o universo da Fototerapia: desde características essenciais, que todo profissional da área precisa saber, até os pontos que farão de você um expert no assunto!
-                Você aprenderá todas as diversas possibilidades que o Laser de Diodo e a Luz Intensa Pulsada podem trazer à sua carreira; todos os tratamentos possíveis com ambas tecnologias super lucrativas! Além disso, você terá protocolos com evidência clínica de última geração realizados em primeira mão para você!
-                Ah! E as surpresas não param por aí: tanto o conteúdo teórico quanto o prático serão apresentados com o uso de aparelhos líderes do mercado e aprovados pelos maiores nomes da estética: LYRA e VEGA!
-                <br>Isso mesmo! Você terá TODO ESSE CONTEÚDO PRESENCIAL e na PRÁTICA por apenas R$87,00
+                <b>O que você vai aprender?</b><br>
+                Nesta imersão de 7 horas, você aprenderá os principais pilares que compõem o universo da Fototerapia: desde suas características essenciais, diferenças entre laser e luz intensa pulsada,  identificação da tecnologia ideal para cada tratamento até protocolos com evidência clínica prontos para revolucionar seus resultados.
+                Ah! E não para por aí: além de todo aporte teórico, o evento ainda contará com prática demonstrativa – apresentada com o uso de aparelhos líderes do mercado e aprovados pelos maiores nomes da estética: LYRA e VEGA!
+                <br><b>Garanta já a sua vaga.</b>
             </p>
             <button
                 @click="scrollTo"

@@ -64,7 +64,7 @@ export default {
     '~/plugins/vue-the-mask.js',
     '~/plugins/axios.js',
     '~/plugins/gtag',
-    '~/plugins/vue-the-mask.js',
+    // '~/plugins/vue-the-mask.js',
     // '~/plugins/vue-gtag.client.js',
     // '~/plugins/vue-gtag.server.js',
   ],
