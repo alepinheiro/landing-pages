@@ -7,11 +7,11 @@
     export default {
         data: function(){
             return {
-                title: 'Workshop de glúteos - RentalMed',
-                description: 'Alessandro Pinheiro',
-                keywords: 'Protocolos exclusivos para turbinar glúteos',
+                title: 'Workshop de Glúteos - RentalMed',
+                description: 'Protocolos exclusivos para turbinar glúteos',
+                keywords: 'RentalMed WorkShop glúteos',
                 url: 'https://lp.rentalmed.com.br/workshop-emily-santos',
-                image: 'https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/06/workshop-emily-santos-featured-image.png',
+                image: 'https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/06/workshop-emily-santos-featured-image.jpg',
             }
         },
         head() {
@@ -30,7 +30,7 @@
 
                     { hid: 'og:image', property: 'og:image', content: this.image },
                     { hid: 'og:image:image:secure_url', property: 'og:image:image:secure_url', content: this.image },
-                    { hid: 'og:image:type', property: 'og:image:type', content: 'image/png' },
+                    { hid: 'og:image:type', property: 'og:image:type', content: 'image/jpg' },
                     { property: 'og:image:width', content: "300" },
                     { property: 'og:image:height', content: "300" },
 
@@ -44,7 +44,10 @@
                     behavior: "smooth"
                 })
             }
-        }
+        },
+        mounted(){
+            this.$ga.page(this.$router)
+        },
     }
 
 </script>
