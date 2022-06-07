@@ -152,7 +152,7 @@
         </div>
 
 
-        <button type="submit" class="btn-workshop-glu w-full">
+        <button type="submit" class="btn-workshop-glu w-full flex flex-row items-center justify-center">
             <div class="btnText">
                 Garantir minha vaga
             </div>
@@ -201,10 +201,10 @@
     /* .registration-form button{
         @apply w-full m-auto bg-purple-600 text-white rounded-full py-2 px-4 uppercase flex flex-row items-center justify-center;
     } */
-    .btn-loading{
-        @apply w-14 h-14 px-2;
+    .btn-loading {
+        @apply w-10 h-10 px-2;
     }
-    .msg-box{
+    .msg-box {
         @apply mt-4 text-center rounded p-2;
     }
 
