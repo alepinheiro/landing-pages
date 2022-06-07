@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/AssistenciaTecnica/loja-integrada", {data:[{}],fetch:{},mutations:void 0});

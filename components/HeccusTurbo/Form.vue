@@ -1,86 +1,3 @@
-<template>
-    <form id="form" class="form" @submit="submitForm" :name="form_name">
-
-        <div class="input-group">
-            <label for="name">Nome completo</label>
-            <input
-                type="text"
-                name="name"
-                id="name"
-                placeholder="Nome"
-                v-model="nameInput"
-                required
-            >
-        </div>
-
-        <div class="input-group">
-            <label for="whatsapp">WhatsApp</label>
-            <the-mask :mask="['(##) ####-####', '(##) #####-####']"
-                name="whatsapp"
-                id="whatsapp"
-                placeholder="WhatsApp com DDD"
-                v-model="whatsappInput"
-                required
-            />
-        </div>
-
-        <div class="input-group">
-            <label for="email">Email</label>
-            <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Email"
-                v-model="emailInput"
-                required
-            >
-        </div>
-
-        <div class="input-group">
-
-            <label for="job">Cargo</label>
-            <select
-                name="job"
-                id="job"
-                v-model="jobInput"
-                required
-            >
-                <option v-for="job in jobs" :value="job.value">
-                    {{job.text}}
-                </option>
-            </select>
-
-        </div>
-
-        <div class="checkbox-wrapper ">
-            <div class="checkbox">
-                <input id="checkbox-1" aria-describedby="checkbox-1" type="checkbox" checked required>
-                <label for="checkbox-1" >Estou de acordo com os <a href="#" class=" hover:underline">termos e condições.</a></label>
-            </div>
-
-            <div class="checkbox">
-                <input id="checkbox-2" aria-describedby="checkbox-2" type="checkbox" checked required>
-                <label for="checkbox-2">Autorizo o envio de comunicações.</label>
-            </div>
-        </div>
-
-        <button type="submit">
-            <div class="btnText">
-                Quero conhecer tudo sobre o heccus turbo!
-            </div>
-            <div v-if="loadingStatus" class="btn-loading">
-                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2A10 10 0 1 0 22 12A10 10 0 0 0 12 2Zm0 18a8 8 0 1 1 8-8A8 8 0 0 1 12 20Z" opacity=".5"/><path fill="currentColor" d="M20 12h2A10 10 0 0 0 12 2V4A8 8 0 0 1 20 12Z"><animateTransform attributeName="transform" dur="1s" from="0 12 12" repeatCount="indefinite" to="360 12 12" type="rotate"/></path></svg>
-            </div>
-        </button>
-
-        <transition name="fade">
-            <div v-if="isError || isSuccess" class="msg-box" :class="{'bg-green-400 text-green-600': isSuccess, 'bg-red-400 text-red-600': isError,}">
-                <p>{{apiMessage}}</p>
-            </div>
-        </transition>
-    </form>
-</template>
-
 <script>
     import {mask} from 'vue-the-mask'
     import axios from 'axios'
@@ -168,6 +85,91 @@
         }
     }
 </script>
+
+<template>
+    <form id="form" class="form" @submit="submitForm" :name="form_name">
+
+        <div class="input-group">
+            <label for="name">Nome completo</label>
+            <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Nome"
+                v-model="nameInput"
+                required
+            >
+        </div>
+
+        <div class="input-group">
+            <label for="whatsapp">WhatsApp</label>
+            <the-mask :mask="['(##) ####-####', '(##) #####-####']"
+                name="whatsapp"
+                id="whatsapp"
+                placeholder="WhatsApp com DDD"
+                v-model="whatsappInput"
+                required
+            />
+        </div>
+
+        <div class="input-group">
+            <label for="email">Email</label>
+            <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email"
+                v-model="emailInput"
+                required
+            >
+        </div>
+
+        <div class="input-group">
+
+            <label for="job">Cargo</label>
+            <select
+                name="job"
+                id="job"
+                v-model="jobInput"
+                required
+            >
+                <option v-for="job in jobs" :value="job.value">
+                    {{job.text}}
+                </option>
+            </select>
+
+        </div>
+
+        <div class="checkbox-wrapper ">
+            <div class="checkbox">
+                <input id="checkbox-1" aria-describedby="checkbox-1" type="checkbox" checked required>
+                <label for="checkbox-1" >Estou de acordo com os <a href="#" class=" hover:underline">termos e condições.</a></label>
+            </div>
+
+            <div class="checkbox">
+                <input id="checkbox-2" aria-describedby="checkbox-2" type="checkbox" checked required>
+                <label for="checkbox-2">Autorizo o envio de comunicações.</label>
+            </div>
+        </div>
+
+        <button type="submit">
+            <div class="btnText">
+                Quero conhecer tudo sobre o heccus turbo!
+            </div>
+            <div v-if="loadingStatus" class="btn-loading">
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2A10 10 0 1 0 22 12A10 10 0 0 0 12 2Zm0 18a8 8 0 1 1 8-8A8 8 0 0 1 12 20Z" opacity=".5"/><path fill="currentColor" d="M20 12h2A10 10 0 0 0 12 2V4A8 8 0 0 1 20 12Z"><animateTransform attributeName="transform" dur="1s" from="0 12 12" repeatCount="indefinite" to="360 12 12" type="rotate"/></path></svg>
+            </div>
+        </button>
+
+        <transition name="fade">
+            <div v-if="isError || isSuccess" class="msg-box" :class="{'bg-green-400 text-green-600': isSuccess, 'bg-red-400 text-red-600': isError,}">
+                <p>{{apiMessage}}</p>
+            </div>
+        </transition>
+    </form>
+</template>
+
+
 
 <style>
     .fade-enter-active, .fade-leave-active {

@@ -1,8 +1,5 @@
 <script setup>
     import { Icon } from '@iconify/vue2'
-import Card from '@/components/WorkshopGluteos/Card.vue';
-import Form from '@/components/WorkshopGluteos/Form.vue';
-
 </script>
 
 <script>
@@ -85,19 +82,19 @@ import Form from '@/components/WorkshopGluteos/Form.vue';
 
         <div class="max-w-6xl my-8 px-5 md:w-8/12 mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
 
-            <Card
+            <WorkshopGluteosCard
                 :icon="'fluent:calendar-ltr-28-regular'"
                 :text="'23 de julho de 2022'"
             />
-            <Card
+            <WorkshopGluteosCard
                 :icon="'bytesize:clock'"
                 :text="'das 09h às 13h'"
             />
-            <Card
+            <WorkshopGluteosCard
                 :icon="'ep:map-location'"
                 :text="'Rentalmed Florianópolis/SC'"
             />
-            <Card
+            <WorkshopGluteosCard
                 :icon="'fluent:ticket-diagonal-24-regular'"
                 :text="'Investimento   R$49,90'"
             />
@@ -165,7 +162,7 @@ import Form from '@/components/WorkshopGluteos/Form.vue';
             </div>
             <div class="w-full md:w-1/2 flex flex-col items-center py-5 " ref="subscribe">
                 <h2 class="text-2xl font-semibold uppercase mx-auto text-white">Garanta jÁ sua vaga</h2>
-                <Form  />
+                <WorkshopGluteosForm  />
             </div>
         </div>
 

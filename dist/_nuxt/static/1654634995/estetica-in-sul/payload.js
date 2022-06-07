@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/estetica-in-sul", {data:[{}],fetch:{},mutations:void 0});
