@@ -1,7 +1,7 @@
 <script setup>
     import { Icon } from '@iconify/vue2'
-import Card from '~/components/WorkshopGluteos/Card.vue';
-import Form from '~/components/WorkshopGluteos/Form.vue';
+import Card from '@/components/WorkshopGluteos/Card.vue';
+import Form from '@/components/WorkshopGluteos/Form.vue';
 
 </script>
 
