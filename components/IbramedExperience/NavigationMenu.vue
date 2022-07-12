@@ -34,7 +34,7 @@
     <div>
         <div class="flex flex-col gap-4 w-fit mx-auto justify-center items-center" v-if="showButtons">
 
-            <a href="#" class="ibramed-experience-btn"> Fotos Evento </a>
+            <a href="https://drive.google.com/drive/folders/1siZOd5p0AX1p0Iu_RYEbApAQUYJY9B4a" class="ibramed-experience-btn"> Fotos Evento </a>
 
             <button class="ibramed-experience-btn" @click="hideButtons"> Gere seu certificado</button>
 
