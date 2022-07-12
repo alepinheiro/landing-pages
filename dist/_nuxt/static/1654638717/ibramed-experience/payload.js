@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/ibramed-experience", {data:[{}],fetch:{},mutations:void 0});
