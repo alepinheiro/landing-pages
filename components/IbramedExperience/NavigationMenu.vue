@@ -38,7 +38,7 @@
 
             <button class="ibramed-experience-btn" @click="hideButtons"> Gere seu certificado</button>
 
-            <a href="https://forms.gle/UDjC3qikhJSMdFGJA" class="ibramed-experience-btn"> Pesquisa de satisfação</a>
+            <a href="https://forms.gle/fAVtyC2XSLFr9Nmy5" class="ibramed-experience-btn"> Pesquisa de satisfação</a>
 
         </div>
 
