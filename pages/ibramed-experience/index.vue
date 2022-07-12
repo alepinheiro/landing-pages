@@ -55,7 +55,6 @@ export default {
 
 <template>
  <div class="w-full min-h-screen flex flex-col bg-ibramed-experience bg-cover font-metropolis justify-between">
-
     <div class="flex flex-col py-10 gap-4 px-5 w-full justify-center my-auto">
         <div class="flex flex-col md:flex-row max-w-3xl mx-auto items-center gap-8">
 
