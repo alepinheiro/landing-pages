@@ -201,10 +201,10 @@
         @apply w-4 h-4 text-rosa-primary bg-purple-100 border-gray-300 rounded focus:ring-purple-600 focus:ring-2 ;
     }
     .htm-training-btn-submit-form{
-        @apply w-fit items-center justify-center bg-verde-primary hover:bg-green-600 hover:scale-110 transition-all rounded-full text-center py-3 px-8 font-black leading-tight;
+        @apply flex flex-row w-fit items-center justify-center bg-verde-primary hover:bg-green-600 hover:scale-110 transition-all rounded-full text-center py-3 px-8 font-black leading-tight;
     }
     .htm-training-btn-loading {
-        @apply w-10 h-10 px-2;
+        @apply w-8 h-8 px-2;
     }
     .htm-training-msg-box {
         @apply mt-4 text-center rounded p-2;
