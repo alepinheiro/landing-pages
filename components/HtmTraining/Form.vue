@@ -12,7 +12,7 @@
                 emailInput: null,
                 jobInput: null,
                 loadingStatus: false,
-                form_name: '[EQP][HTM_TRAINING]',
+                form_name: '[EVE][LP_HTM_TRAINING]',
                 apiStatus: null,
                 apiMessage: '',
                 isSuccess: false,
