@@ -79,7 +79,7 @@
 </script>
 
 <template>
-    <form id="form" class="registration-form" @submit="submitForm" :name="form_name">
+    <form id="dra-emily-santos-form" class="registration-form" @submit="submitForm" :name="form_name">
 
         <div class="input-wrapper group">
           <input
@@ -176,35 +176,35 @@
     .fade-enter, .fade-leave-to {
         opacity: 0;
     }
-    .registration-form{
+    #dra-emily-santos-form {
         @apply p-4 text-white w-full;
     }
-    .input-wrapper {
+    #dra-emily-santos-form .input-wrapper {
         @apply relative z-0 w-full mb-6 ;
     }
-    .input-form {
+    #dra-emily-santos-form .input-form {
         @apply block py-2.5 px-2 w-full text-sm text-white
         bg-transparent border-0 border-b border-white appearance-none focus:outline-none focus:ring-0
         focus:border-white;
     }
-    .label-form {
+    #dra-emily-santos-form .label-form {
         @apply px-2 peer-focus:font-medium absolute text-sm text-white  duration-300 transform -translate-y-6
         scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-white  peer-placeholder-shown:scale-100
         peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6;
     }
-    .checkbox-wrapper {
+    #dra-emily-santos-form .checkbox-wrapper {
         @apply flex flex-row items-center mb-4;
     }
-    .checkbox-input {
+    #dra-emily-santos-form .checkbox-input {
         @apply w-4 h-4 text-purple-600 bg-purple-100 border-gray-300 rounded focus:ring-purple-600 focus:ring-2 ;
     }
     /* .registration-form button{
         @apply w-full m-auto bg-purple-600 text-white rounded-full py-2 px-4 uppercase flex flex-row items-center justify-center;
     } */
-    .btn-loading {
+    #dra-emily-santos-form .btn-loading {
         @apply w-10 h-10 px-2;
     }
-    .msg-box {
+    #dra-emily-santos-form .msg-box {
         @apply mt-4 text-center rounded p-2;
     }
 

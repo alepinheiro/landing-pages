@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/htm-training", {data:[{}],fetch:{},mutations:void 0});

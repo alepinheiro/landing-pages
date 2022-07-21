@@ -11,10 +11,13 @@ module.exports = {
   theme: {
     extend: {
       colors:{
-        'rtmd-primary': '#ef476f'
+        'rtmd-primary': '#ef476f',
+        'roxo-primary': '#7800FF',
+        'rosa-primary': '#FF55FF',
+        'verde-primary': '#37CD69',
       },
       fontFamily: {
-        outfit: ["Outfit", ...defaultTheme.fontFamily.sans],
+        outfit: ['Outfit', ...defaultTheme.fontFamily.sans],
         metropolis: ["MetropolisNF", ...defaultTheme.fontFamily.sans],
       },
       backgroundImage: {
