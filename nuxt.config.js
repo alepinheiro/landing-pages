@@ -14,18 +14,33 @@ export default {
     base: '/'
   },
 
+  pwa: {
+    icon: {
+      /* icon options */
+    },
+    meta: {
+      appleStatusBarStyle: 'black-translucent',
+      name: 'rentalmed',
+      author: 'rentalmed',
+      description: 'Aparelhos de estética em até 60X',
+      theme_color: '#7800FF',
+      lang: 'pt-BR',
+      ogHost: 'rentalmed.com.br',
+    }
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'landing-page',
     htmlAttrs: {
       lang: 'pt-BR',
     },
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=yes' },
-    ],
+    // meta: [
+    //   { charset: 'utf-8' },
+    //   { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+    //   { hid: 'description', name: 'description', content: '' },
+    //   { name: 'format-detection', content: 'telephone=yes' },
+    // ],
     link: [{ rel: 'icon', type: 'image/png', href: '/favicon-rentalmed.png' }],
     script: [
       // {
@@ -91,6 +106,10 @@ export default {
     'vue-ssr-carousel/nuxt',
 
     '@nuxtjs/google-analytics',
+
+
+    // https://pwa.nuxtjs.org/setup
+    '@nuxtjs/pwa',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
