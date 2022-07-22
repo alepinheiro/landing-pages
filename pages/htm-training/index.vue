@@ -71,7 +71,7 @@
             }
         },
         mounted(){
-            this.$ga.page(this.$router)
+            // this.$ga.page(this.$router)
         },
     }
 

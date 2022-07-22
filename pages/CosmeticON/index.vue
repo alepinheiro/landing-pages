@@ -81,7 +81,7 @@ export default {
     },
   },
   mounted(){
-    this.$ga.page('/' + this.$route.name)
+    // this.$ga.page('/' + this.$route.name)
   }
 }
 </script>

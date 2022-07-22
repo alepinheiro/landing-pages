@@ -53,15 +53,16 @@ export default {
       //   async: true,
       //   src: "https://www.googletagmanager.com/gtag/js?id=G-WV2CGB0X1H",
       // },
+      // {
+      //   type:'text/javascript',
+      //   async: true,
+      //   src: "https://www.googletagmanager.com/gtag/js?id=G-KFTYYT12VY",
+      // },
       {
-        type:'text/javascript',
-        async: true,
-        src: "https://www.googletagmanager.com/gtag/js?id=UA-108335612-1",
-      },
-      {
-        type:'text/javascript',
-        async: true,
-        src: "https://www.googletagmanager.com/gtag/js?id=UA-108335612-1",
+        innerHTML: `window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag(` + 'js' + `, new Date());
+        gtag(` + 'config' + `, ` + 'G-KFTYYT12VY' + `);`
       },
     ],
   },
@@ -70,15 +71,15 @@ export default {
   css: [],
 
 
-  env: {
-    /** Configuración de google-analytics */
-    gaId: 'UA-108335612-1',
-  },
+  // env: {
+  //   /** Configuración de google-analytics */
+  //   gaId: '320357997',
+  // },
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/vue-the-mask.js',
     '~/plugins/axios.js',
-    '~/plugins/gtag',
+    // '~/plugins/gtag',
     // '~/plugins/vue-the-mask.js',
     // '~/plugins/vue-gtag.client.js',
     // '~/plugins/vue-gtag.server.js',
@@ -100,12 +101,12 @@ export default {
     '@nuxtjs/composition-api/module',
 
     //https://google-analytics.nuxtjs.org/setup
-    '@nuxtjs/google-analytics',
+    // '@nuxtjs/google-analytics',
 
     //https://github.com/BKWLD/vue-ssr-carousel
     'vue-ssr-carousel/nuxt',
 
-    '@nuxtjs/google-analytics',
+    // '@nuxtjs/google-analytics',
 
 
     // https://pwa.nuxtjs.org/setup
@@ -117,7 +118,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxt/http',
-    '@nuxtjs/google-analytics',
+    // '@nuxtjs/google-analytics',
     '@nuxtjs/google-gtag',
 
     //https://github.com/WilliamDASILVA/nuxt-facebook-pixel-module
@@ -129,13 +130,15 @@ export default {
       disabled: false
     }],
   ],
-  // 'google-gtag':{
-  //   id: 'G-WV2CGB0X1H',
-  //   config:{
-  //     send_page_view: true,
-  //   },
-  //   debug: true,
-  // },
+
+  'google-gtag':{
+    id: 'G-KFTYYT12VY',
+    config:{
+      send_page_view: false,
+    },
+    debug: true,
+  },
+
   googleFonts: {
     families: {
       Outfit: [100, 200, 300, 400, 500, 600, 700, 800, 900]
@@ -144,15 +147,15 @@ export default {
   tailwindcss: {
     jit: true
   },
-  googleAnalytics: {
-    id: 'UA-108335612-1',
-    autoTracking: {
-      screenview: true
-    },
-    debug: {
-      enabled: true
-    }
-  },
+  // googleAnalytics: {
+  //   id: '320357997',
+  //   autoTracking: {
+  //     screenview: true
+  //   },
+  //   debug: {
+  //     enabled: true
+  //   }
+  // },
 
 
 
