@@ -31,7 +31,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'landing-page',
+    title: 'rentalmed',
     htmlAttrs: {
       lang: 'pt-BR',
     },
