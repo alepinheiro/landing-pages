@@ -1,5 +1,6 @@
 {
-  "name": "landing-page",
+  "name": "rentalmed",
+  "description": "Aparelhosd de estética em até 60x",
   "version": "1.0.0",
   "private": true,
   "scripts": {
