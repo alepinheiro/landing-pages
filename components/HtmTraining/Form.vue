@@ -21,9 +21,9 @@
                 apiMessageError: 'Erro ao cadastrar os dados! Talvez este telefone já esteja cadastrado.',
                 jobs:[
                     {text: 'Esteticista', value: 'esteticista'},
-                    {text: 'Fisiterapeuta', value: 'fisioterapeuta'},
+                    {text: 'Fisioterapeuta', value: 'fisioterapeuta'},
                     {text: 'Médica', value: 'medica'},
-                    {text: 'BioMédica', value: 'biomedica'},
+                    {text: 'Biomédica', value: 'biomedica'},
                     {text: 'Dentista', value: 'dentista'},
                     {text: 'Outros', value: 'outros'},
                 ]

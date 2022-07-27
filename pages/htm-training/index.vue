@@ -8,10 +8,9 @@
         data: function(){
             return {
                 title: 'Técnicas de Harmonização Corporal - HTM Training - rentalmed',
-                description: 'Técnicas de Harmonização Corporal e Lipo 3D',
-                keywords: 'RentalMed WorkShop HTM harmonizaçao corporal',
+                description: 'Workshop Técnicas de Harmonização Corporal e Lipo 3D',
                 url: 'https://lp.rentalmed.com.br/htm-training',
-                image: 'https://loja-wp-rentalmed.s3.amazonaws.com/wp-content/uploads/2022/06/workshop-emily-santos-featured-image.jpg',
+                image: '/htm-training/og-image-htm-training.jpg',
                 timeTable: [{
                     time: '08h45',
                     content: 'Abertura'
@@ -113,7 +112,7 @@
                 <div class="flex flex-col md:flex-row md:items-end gap-4">
                 
                     <div class="flex flex-col gap-2">
-                        <h2><strong>Harmonização corporais</strong> com</h2>
+                        <h2><strong>Harmonização corporal</strong> com</h2>
                         <span class="font-black text-5xl text-roxo-primary">Criolipólise</span>
                     </div>
 
@@ -140,7 +139,7 @@
         
         <div class="px-5 py-6 flex flex-col md:items-center max-w-5xl m-auto">
 
-            <h2 class="text-2xl font-bold mb-6">Conheça as suas professoras</h2>
+            <h2 class="text-2xl font-bold mb-6">Conheça as professoras</h2>
 
             <div class="flex flex-col md:flex-row gap-4">
 
@@ -150,8 +149,8 @@
                     <ul class="list-disc list-inside text-center gap-3 flex flex-col">
                         <li>Fisioterapeuta graduada pela Universidade São Francisco;</li>
                         <li>Pós-graduada em Fisioterapia Dermato Funcional pela Universidade Metodista de Piracicaba;</li>
-                        <li>Professora em cursos de pós graduação em gisioterapia dermato funcional e cursos técnicos em estética e eletrocosmética;</li>
-                        <li>Fisioterapeuta consultora comercial sênior na HTM;</li>
+                        <li>Professora em cursos de pós-graduação em gisioterapia dermato funcional e cursos técnicos em estética e eletrocosmética;</li>
+                        <li>Fisioterapeuta consultora comercial sênior na HTM.</li>
                     </ul>
                 </div>
 
@@ -161,7 +160,7 @@
                     <ul class="list-disc list-inside text-center gap-3 flex flex-col">
                         <li>Fisioterapeuta graduada pela Universidade Federal de São Carlos;</li>
                         <li>Pós-graduada pelo Programa de Residência Multiprofissional em Gestão Integrada de Serviços de Saúde do Hospital das Clínicas da Faculdade de Medicina da Universidade de São Paulo;</li>
-                        <li>Consultora Comercial Pleno na HTM;</li>
+                        <li>Consultora Comercial Pleno na HTM.</li>
                     </ul>
                 </div>
 
