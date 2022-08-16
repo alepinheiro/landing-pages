@@ -55,6 +55,7 @@
                             
                             // meta pixel
                             window.fbq('track', 'Lead');
+                            window.fbq('track', 'LP_HTM_TRAINING');
                             // tag manager
                             window.dataLayer.push({
                                 'event': 'lead_generation',
