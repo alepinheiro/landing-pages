@@ -41,7 +41,7 @@ export default {
     //   { hid: 'description', name: 'description', content: '' },
     //   { name: 'format-detection', content: 'telephone=yes' },
     // ],
-    link: [{ rel: 'icon', type: 'image/png', href: '/favicon-rentalmed.png' }],
+    link: [{ rel: 'icon', type: 'image/png', href: '/icon.png' }],
     script: [
       // {
       //   type:'text/javascript',
@@ -58,12 +58,17 @@ export default {
       //   async: true,
       //   src: "https://www.googletagmanager.com/gtag/js?id=G-KFTYYT12VY",
       // },
+      
       {
         innerHTML: `window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag(` + 'js' + `, new Date());
         gtag(` + 'config' + `, ` + 'G-KFTYYT12VY' + `);`
-      },
+      },{
+        src: 'js/facebook-pixel.js', type: 'text/javascript'
+      }, {
+        src: 'js/gtm.js', type: 'text/javascript'
+      }
     ],
   },
 

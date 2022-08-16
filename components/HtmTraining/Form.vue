@@ -52,6 +52,15 @@
                     .then((res) => {
                         console.log(res)
                         if (res.status == 200){
+                            
+                            // meta pixel
+                            window.fbq('track', 'Lead');
+                            // tag manager
+                            window.dataLayer.push({
+                                'event': 'lead_generation',
+                                'form_name': 'LP_HTM_TRAINING'
+                            })
+
                             this.loadingStatus = false
                             this.apiMessage = this.apiMessageSuccess
                             this.isError = false
