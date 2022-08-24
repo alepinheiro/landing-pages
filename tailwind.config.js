@@ -15,6 +15,8 @@ module.exports = {
         'roxo-primary': '#7800FF',
         'rosa-primary': '#FF55FF',
         'verde-primary': '#37CD69',
+        'pa-azul': '#05CECD',
+        'pa-cinza': '#F2ECF2',
       },
       fontFamily: {
         outfit: ['Outfit', ...defaultTheme.fontFamily.sans],

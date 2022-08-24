@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/curso-de-intradermoterapia-pressurizada", {data:[{}],fetch:{},mutations:void 0});
