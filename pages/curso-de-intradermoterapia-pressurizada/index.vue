@@ -208,7 +208,7 @@
     <!-- footer -->
     <section class="py-8 px-5 bg-roxo-primary ">
         <a href="https://www.rentalmed.com.br">
-            <img src="/logo-rentalmed.svg" alt="" class="invert h-10 mx-auto">
+            <img src="/logo-rentalmed.svg" alt="" class="h-10 mx-auto logo-rentalmed">
         </a>
 
     </section>
@@ -227,5 +227,8 @@
     }
     .pa-content-section li{
         @apply mb-2
+    }
+    .logo-rentalmed {
+        filter: invert(100%);
     }
 </style>
