@@ -5,6 +5,7 @@
 <script>
 
     export default {
+        middleware: 'redirect',
         data: function(){
             return {
                 title: 'Como ser um expert em intradermoterapia pressurizada de alta performance - rentalmed',
@@ -161,7 +162,7 @@
     <!-- corpo docente -->
     <section class="bg-pa-cinza py-8 px-5">
         <div class="flex flex-col md:flex-row gap-8 max-w-3xl mx-auto md:items-center">
-            <img src="/cip/content-pablo-acacio.png" alt="" class="w-3/4 md:w-full mx-auto">          
+            <img src="/cip/content-pablo-acacio.png" alt="" class="w-3/4 md:w-full mx-auto">
             <div class="flex flex-col gap-4 w-full" >
                 <h1 class="text-4xl font-black text-roxo-primary">conheça o professor</h1>
                 <h2 class="font-bold">Pablo Acácio</h2>
@@ -175,7 +176,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- inclusos -->
     <section class="py-8 px-5">
         <div class="flex flex-col md:flex-row-reverse gap-8 max-w-3xl mx-auto md:items-center text-roxo-primary">
